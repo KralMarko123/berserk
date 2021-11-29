@@ -17,8 +17,6 @@ body {
   height: 100%;
   min-height: 100vh;
 
-  padding: 1em;
-
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -46,7 +44,7 @@ body {
   width: 50%;
 
   color: white;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: "Bangers", cursive;
   line-height: 1.2;
   letter-spacing: 3px;
@@ -55,6 +53,24 @@ body {
   text-align: center;
 
   animation: quote-animation infinite 20s ease-in-out;
+}
+
+.audio-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-500px) translateY(-50%);
+}
+
+.audio-container button {
+  font-size: 2rem;
+  background-color: transparent;
+  color: white;
+  filter: grayscale(100%);
+}
+
+.audio-container button:hover {
+  cursor: pointer;
 }
 
 .person {
@@ -84,5 +100,25 @@ body {
   }
   80% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 1279px) {
+  .image-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .quote {
+    width: 90%;
+    text-indent: 0em;
+    font-size: 1.2rem;
+  }
+
+  .audio-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

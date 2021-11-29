@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import ImageContainer from "./ImageContainer";
+import AudioContainer from "./AudioContainer";
 import Quote from "./Quote";
 import "../styles/App.css";
 
@@ -38,7 +39,7 @@ const characters = [
 ];
 
 const App = () => {
-  const [index, setIndex] = useState(4);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     let nextIndex;
@@ -62,6 +63,7 @@ const App = () => {
         person={characters[index].name}
         color={characters[index].color}
       />
+      <AudioContainer />
     </div>
   );
 };
