@@ -82,7 +82,7 @@ const characters = [
 ];
 
 const App = () => {
-  const [index, setIndex] = useState(10);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     let nextIndex;
