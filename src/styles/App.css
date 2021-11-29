@@ -33,7 +33,7 @@ body {
   box-shadow: inset 0px 0px 15px 15px black;
 
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 
   animation: image-animation infinite 20s ease-in-out;
@@ -41,7 +41,7 @@ body {
 
 .quote {
   opacity: 0;
-  width: 50%;
+  width: 60%;
 
   color: white;
   font-size: 2.2rem;
@@ -75,6 +75,8 @@ body {
 
 .person {
   margin-left: 1em;
+  border-left: solid 1px white;
+  padding-left: 1em;
 }
 
 @keyframes image-animation {
@@ -84,6 +86,10 @@ body {
 
   80% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -110,6 +116,7 @@ body {
   }
 
   .quote {
+    white-space: normal;
     width: 90%;
     text-indent: 0em;
     font-size: 1.2rem;

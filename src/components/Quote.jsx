@@ -5,7 +5,7 @@ const Quote = ({ quote, person, color }) => {
     <p className="quote">
       {quote}
       <span className="person" style={{ color: `${color}` }}>
-        - {person}
+        {person}
       </span>
     </p>
   );

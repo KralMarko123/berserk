@@ -15,7 +15,7 @@ const characters = [
     src: "/images/griffith.jpg",
     name: "Griffith",
     quote: "A dream… It’s something you do for yourself, not for others.",
-    color: "cyan",
+    color: "powderblue",
   },
   {
     src: "/images/casca.jpg",
@@ -27,19 +27,62 @@ const characters = [
     src: "/images/skull-knight.jpg",
     name: "Skull Knight",
     quote: "I am the foe of the inhumans",
-    color: "#900C3F",
+    color: "crimson",
+  },
+  {
+    src: "/images/schierke.jpg",
+    name: "Schierke",
+    quote:
+      "No matter how strong, for a human to fight a monster means he has submerged his humanity and transformed himself into a greater monster.",
+    color: "darkgreen",
   },
 
   {
     src: "/images/pippin.jpg",
     name: "Pippin",
     quote: "Drink.",
-    color: "lightgreen",
+    color: "goldenrod",
+  },
+
+  {
+    src: "/images/godot.jpg",
+    name: "Godot",
+    quote:
+      "If you desire one thing for so long, it’s a given that you’ll miss other things along the way. That’s how it is... that’s life.",
+    color: "orangered",
+  },
+
+  {
+    src: "/images/rickert.jpg",
+    name: "Rickert",
+    quote: "My leader...isn't the Hawk of Light. Goodbye.",
+    color: "deepskyblue",
+  },
+
+  {
+    src: "/images/judeau.jpg",
+    name: "Judeau",
+    quote: "You sure do cry a lot...you know.",
+    color: "lightslategray",
+  },
+
+  {
+    src: "/images/corkus.jpg",
+    name: "Corkus",
+    quote: "Looky here. A woman in hell...? I knew this was a dream.",
+    color: "yellow",
+  },
+
+  {
+    src: "/images/zodd.jpg",
+    name: "Zodd",
+    quote: "You will face your death. A death you can't escape.",
+    color: "maroon",
   },
 ];
 
 const App = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(10);
 
   useEffect(() => {
     let nextIndex;
