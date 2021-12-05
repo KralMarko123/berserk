@@ -7,8 +7,10 @@ const AudioContainer = () => {
     setAudio((prevState) => !prevState);
 
     if (audio === true) {
+      document.getElementById("music").play();
       document.getElementById("music").muted = false;
     } else {
+      document.getElementById("music").pause();
       document.getElementById("music").muted = true;
     }
   };
@@ -18,14 +20,10 @@ const AudioContainer = () => {
       <button onClick={audioClickHandler}>
         {audio === true ? "🔇" : "🔊"}
       </button>
-      <audio
-        hidden
-        autoPlay
-        muted
-        preload="auto"
-        src="/audio/berserk-ambient-compressed.mp3"
-        id="music"
-      />
+      <audio hidden muted id="music">
+        <source src="/audio/berserk-ambient-compressed.mp3" type="audio/mp3" />
+        Your browser does not support the audio tag.
+      </audio>
     </div>
   );
 };

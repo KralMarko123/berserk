@@ -1,12 +1,7 @@
 import React from "react";
 
 const ImageContainer = ({ image }) => {
-  return (
-    <div
-      style={{ backgroundImage: `url(${image})` }}
-      className="image-container"
-    ></div>
-  );
+  return <img src={image} className="image" />;
 };
 
 export default ImageContainer;
