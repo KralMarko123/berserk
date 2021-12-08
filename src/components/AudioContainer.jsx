@@ -20,7 +20,7 @@ const AudioContainer = () => {
       <button onClick={audioClickHandler}>
         {audio === true ? "🔇" : "🔊"}
       </button>
-      <audio hidden muted id="music">
+      <audio hidden preload="true" muted id="music">
         <source src="/audio/berserk-ambient-compressed.mp3" type="audio/mp3" />
         Your browser does not support the audio tag.
       </audio>

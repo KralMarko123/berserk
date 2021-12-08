@@ -4,6 +4,26 @@ import AudioContainer from "./AudioContainer";
 import Quote from "./Quote";
 import "../styles/App.css";
 
+const pictureURLS = [
+  "/images/guts.jpg",
+  "/images/griffith.jpg",
+  "/images/casca.jpg",
+  "/images/skull-knight.jpg",
+  "/images/schierke.jpg",
+  "/images/pippin.jpg",
+  "/images/godot.jpg",
+  "/images/rickert.jpg",
+  "/images/judeau.jpg",
+  "/images/corkus.jpg",
+  "/images/zodd.jpg",
+  "/images/puck.jpg",
+  "/images/farnese.jpg",
+  "/images/serpico.jpg",
+  "/images/vargas.jpg",
+  "/images/charlotte.jpg",
+  "/images/horse.jpg",
+];
+
 const characters = [
   {
     src: "/images/guts.jpg",
@@ -79,12 +99,62 @@ const characters = [
     quote: "You will face your death. A death you can't escape.",
     color: "maroon",
   },
+
+  {
+    src: "/images/puck.jpg",
+    name: "Puck",
+    quote:
+      "The Elfin King graces you with his presence! Bow your heads, you plebs!",
+    color: "greenyellow",
+  },
+
+  {
+    src: "/images/farnese.jpg",
+    name: "Farnese De Vandimion",
+    quote:
+      "Black Swordsman...No, Hawk of Darkness. I swear I will catch you personally! I swear it on my faith!",
+    color: "lightpink",
+  },
+
+  {
+    src: "/images/serpico.jpg",
+    name: "Serpico",
+    quote:
+      "To be perfectly frank... I am thinking how nice it would be if you died.",
+    color: "lightsalmon",
+  },
+
+  {
+    src: "/images/vargas.jpg",
+    name: "Vargas",
+    quote: "I want you to cut him into little pieces... that demon!",
+    color: "darkolivegreen",
+  },
+
+  {
+    src: "/images/charlotte.jpg",
+    name: "Princess Charlotte",
+    quote: "Sir Griffith, my betrothed, and leader of the band of the hawk...",
+    color: "darkorchid",
+  },
+
+  {
+    src: "/images/horse.jpg",
+    name: "Demon Horse",
+    quote: "...",
+    color: "goldenrod",
+  },
 ];
 
 const App = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(characters.length - 1);
 
   useEffect(() => {
+    pictureURLS.forEach((picture) => {
+      const img = new Image();
+      img.src = picture;
+    });
+
     let nextIndex;
 
     if (index === characters.length - 1) {
@@ -96,7 +166,7 @@ const App = () => {
     setTimeout(() => {
       setIndex(nextIndex);
     }, 20000);
-  }, [index]);
+  }, [index, pictureURLS]);
 
   return (
     <div className="App">
