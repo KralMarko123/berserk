@@ -148,13 +148,12 @@ const characters = [
 
 const App = () => {
   const [index, setIndex] = useState(0);
+  pictureURLS.forEach((picture) => {
+    const img = new Image();
+    img.src = picture;
+  });
 
   useEffect(() => {
-    pictureURLS.forEach((picture) => {
-      const img = new Image();
-      img.src = picture;
-    });
-
     let nextIndex;
 
     if (index === characters.length - 1) {
