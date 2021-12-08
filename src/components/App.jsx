@@ -147,7 +147,7 @@ const characters = [
 ];
 
 const App = () => {
-  const [index, setIndex] = useState(characters.length - 1);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     pictureURLS.forEach((picture) => {
