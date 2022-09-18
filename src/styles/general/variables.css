@@ -10,5 +10,11 @@
 
 	/**TEXT*/
 	--main-font: "Red Hat Display", sans-serif;
-	--base: 16px;
+	--base: 24px;
+	--xl: 3rem;
+	--lg: 2rem;
+	--md: 1rem;
+
+	/**WIDTHS*/
+	--container-width: 1200px;
 }

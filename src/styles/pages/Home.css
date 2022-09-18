@@ -1,0 +1,27 @@
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.home__container {
+	width: var(--container-width);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.home__logo {
+	width: 50%;
+}
+
+.home__desc {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	font-size: var(--md);
+	text-align: justify;
+}
