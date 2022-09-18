@@ -1,0 +1,33 @@
+.plot {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: var(--header-height);
+}
+
+.plot__container {
+	width: var(--container-width);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--normal-gap);
+}
+
+.plot__paragraph {
+	font-size: var(--sm);
+	letter-spacing: var(--text-spacing);
+
+	text-align: justify;
+}
+
+.plot__paragraph:first-letter {
+	margin-right: 3px;
+
+	color: var(--light-accent);
+	font-size: var(--md);
+	font-family: var(--secondary-font);
+	font-weight: bold;
+}

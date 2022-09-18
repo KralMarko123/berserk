@@ -1,27 +1,41 @@
 import React from "react";
 import berserkLogo from "../assets/images/berserk_logo.png";
 import Header from "../components/layout/Header";
+import { motion } from "framer-motion";
 import "../styles/general/page.css";
 import "../styles/pages/Home.css";
 
 const Home = () => {
 	return (
 		<>
-			<Header />
+			<Header shouldAnimate={true} />
 			<div className="home page">
 				<div className="home__container">
-					<img className="home__logo" src={berserkLogo} alt="berserk-logo" />
-					<div className="home__desc">
+					<motion.img
+						className="home__logo"
+						src={berserkLogo}
+						alt="berserk-logo"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ type: "spring", duration: 1 }}
+					/>
+					<motion.div
+						className="home__desc"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ type: "spring", duration: 1, delay: 0.5 }}
+					>
 						<p>
-							I personally started reading berserk a couple of years ago and have been hooked ever
-							since. I dream of being as strong as Guts and can only hope to have the will needed to
-							persevere through the hardships of life.
+							Welcome to a simple tribute page to the adventure that is the story of Berserk. The
+							author deeply admires Kentaro's work and has invested himself in Guts's hardships and
+							unbreakable will.
 						</p>
 						<p>
-							Enjoy this little fanpage of mine and use it as a simple tool to ease the pain, my
-							fellow strugglers.
+							Immerse yourself in the world of Berserk and check out the complex characters,
+							intertwined storylines and beautiful designs. Enjoy this fanpage to its potential and
+							use it as a simple tool to ease the pain, fellow strugglers.
 						</p>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</>
