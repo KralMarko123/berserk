@@ -19,6 +19,9 @@
 	/**WIDTHS*/
 	--container-width: 1200px;
 
+	/**PADDINGS*/
+	--simple-padding: 1em;
+
 	/**GAPS*/
 	--normal-gap: 2em;
 	--small-gap: 1em;

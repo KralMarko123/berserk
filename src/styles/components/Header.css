@@ -1,0 +1,27 @@
+.header {
+	width: 100%;
+	height: fit-content;
+	padding: var(--simple-padding) 0;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--dark-main);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__nav {
+	width: var(--container-width);
+}
+
+.header__nav__list {
+	width: 100%;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: var(--normal-gap);
+}
