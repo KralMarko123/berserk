@@ -14,7 +14,12 @@
 	--xl: 3rem;
 	--lg: 2rem;
 	--md: 1rem;
+	--text-spacing: 2px;
 
 	/**WIDTHS*/
 	--container-width: 1200px;
+
+	/**GAPS*/
+	--normal-gap: 2em;
+	--small-gap: 1em;
 }

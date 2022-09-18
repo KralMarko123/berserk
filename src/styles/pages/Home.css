@@ -11,6 +11,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: var(--normal-gap);
 }
 
 .home__logo {
@@ -18,10 +19,12 @@
 }
 
 .home__desc {
+	max-width: 75%;
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
+	gap: var(--small-gap);
 
 	font-size: var(--md);
+	letter-spacing: var(--text-spacing);
 	text-align: justify;
 }
