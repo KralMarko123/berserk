@@ -10,15 +10,13 @@ body {
 
 .page {
 	height: fit-content;
+	min-height: 100vh;
 
 	background-color: var(--dark-main);
-	padding: var(--page-padding);
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding-top: calc(var(--header-height) + var(--small-gap));
 }
 
 .container {
+	height: 100%;
 	width: var(--container-width);
 }

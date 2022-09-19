@@ -10,6 +10,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 2;
 }
 
 .header__nav {
@@ -42,7 +43,7 @@
 
 	font-family: var(--secondary-font);
 	text-transform: uppercase;
-	text-shadow: 3px 3px 0px var(--dark-accent);
+	text-shadow: var(--text-shadow);
 }
 
 .nav__list__item:hover {

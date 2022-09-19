@@ -1,19 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Characters from "./pages/Characters";
-import Home from "./pages/Home";
-import Plot from "./pages/Plot";
+import MyRoutes from "./routes/MyRoutes";
+import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "./components/helper/ScrollToTop";
 
 const App = () => {
 	return (
 		<>
 			<Router>
-				<Routes>
-					<Route path="" element={<Home />} />
-					<Route path="/" element={<Home />} />
-					<Route path="/plot" element={<Plot />} />
-					<Route path="/characters" element={<Characters />} />
-				</Routes>
+				<ScrollToTop />
+				<MyRoutes />
 			</Router>
 		</>
 	);

@@ -26,7 +26,6 @@
 	--header-height: 100px;
 
 	/**PADDINGS*/
-	--page-padding: calc(var(--header-height) + 1em) 0;
 	--simple-padding: 1em;
 	--small-padding: 0.25em;
 
@@ -38,4 +37,45 @@
 	--card-border: solid 3px var(--dark-accent);
 	--card-radius: 10px;
 	--card-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+	--text-shadow: 3px 4px 0px var(--dark-accent);
+}
+
+/**TABLET*/
+@media (min-width: 768px) and (max-width: 1199px) {
+	:root {
+		/**TEXT*/
+		--xl: 2rem;
+		--lg: 1.5rem;
+		--md: 1.25rem;
+		--sm: 1rem;
+
+		/**WIDTHS*/
+		--container-width: 95%;
+		--logo-width: 40px;
+
+		/**HEIGHTS*/
+		--header-height: 80px;
+	}
+}
+
+/**MOBILE*/
+@media (max-width: 767px) {
+	:root {
+		/**TEXT*/
+		--xl: 1.75rem;
+		--lg: 1.25rem;
+		--md: 1rem;
+		--sm: 0.85rem;
+
+		/**WIDTHS*/
+		--container-width: 90%;
+		--logo-width: 30px;
+
+		/**HEIGHTS*/
+		--header-height: 60px;
+
+		/**GAPS*/
+		--normal-gap: 0.5em;
+		--small-gap: 0.25em;
+	}
 }
