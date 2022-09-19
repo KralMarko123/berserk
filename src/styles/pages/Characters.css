@@ -1,0 +1,37 @@
+.characters .container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--normal-gap);
+}
+
+.characters__desc {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: var(--small-gap);
+}
+
+.characters__desc p {
+	font-size: var(--sm);
+	letter-spacing: var(--text-spacing);
+	text-align: justify;
+}
+
+.characters__desc p:first-letter {
+	margin-right: 3px;
+
+	color: var(--light-accent);
+	font-size: var(--md);
+	font-family: var(--secondary-font);
+	font-weight: bold;
+}
+
+.characters__list {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--normal-gap);
+}

@@ -1,14 +1,4 @@
-.plot {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	margin-top: var(--header-height);
-}
-
-.plot__container {
-	width: var(--container-width);
-
+.plot .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

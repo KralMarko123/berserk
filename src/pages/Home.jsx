@@ -2,7 +2,6 @@ import React from "react";
 import berserkLogo from "../assets/images/berserk_logo.png";
 import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
-import "../styles/general/page.css";
 import "../styles/pages/Home.css";
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
 		<>
 			<Header shouldAnimate={true} />
 			<div className="home page">
-				<div className="home__container">
+				<div className="container">
 					<motion.img
 						className="home__logo"
 						src={berserkLogo}

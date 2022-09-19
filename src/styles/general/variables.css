@@ -1,24 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap");
 :root {
 	/**COLORS*/
 	--dark-main: rgb(23, 23, 23);
-	--dark-accent: rgb(68, 68, 68);
+	--dark-accent: rgb(43, 43, 43);
 	--light-main: rgb(237, 237, 237);
 	--light-accent: rgb(187, 20, 20);
 	--text-color: var(--light-main);
 
 	/**TEXT*/
 	--main-font: "Red Hat Display", sans-serif;
-	--secondary-font: "Sedgwick Ave", cursive;
+	--secondary-font: "Cantora One", sans-serif;
 	--base: 18px;
 	--xl: 3rem;
 	--lg: 2rem;
 	--md: 1.5rem;
-	--sm: 1rem;
+	--sm: 1.15rem;
 	--text-spacing: 1px;
-	--text-shadow-light: rgba(68, 68, 68, 0.75);
 
 	/**WIDTHS*/
 	--container-width: 1200px;
@@ -28,11 +26,16 @@
 	--header-height: 100px;
 
 	/**PADDINGS*/
-	--page-padding: 2em 0;
+	--page-padding: calc(var(--header-height) + 1em) 0;
 	--simple-padding: 1em;
 	--small-padding: 0.25em;
 
 	/**GAPS*/
-	--normal-gap: 2em;
-	--small-gap: 1em;
+	--normal-gap: 1em;
+	--small-gap: 0.5em;
+
+	/**UTILITY*/
+	--card-border: solid 3px var(--dark-accent);
+	--card-radius: 10px;
+	--card-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }

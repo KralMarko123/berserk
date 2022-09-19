@@ -1,12 +1,8 @@
 .home {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin-top: 0;
 }
 
-.home__container {
-	width: var(--container-width);
-
+.home .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
