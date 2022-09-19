@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { VARIANTS } from "../../constants/AnimationVariants";
 import logo from "../../assets/images/brand.png";
 import "../../styles/components/Header.css";
 
@@ -10,9 +11,10 @@ const Header = ({ shouldAnimate }) => {
 	return (
 		<motion.header
 			className="header"
-			initial={shouldAnimate ? { opacity: 0, y: -100 } : {}}
-			animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
-			transition={shouldAnimate ? { type: "spring", duration: 1, delay: 1 } : {}}
+			variants={VARIANTS.header}
+			initial={shouldAnimate ? "hidden" : {}}
+			animate={shouldAnimate ? "show" : {}}
+			transition={shouldAnimate ? VARIANTS.header.timing : {}}
 		>
 			<nav className="header__nav">
 				<img
