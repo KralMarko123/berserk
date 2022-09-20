@@ -14,6 +14,7 @@ export const CHARACTERS = [
 		image: gutsPoster,
 		cutout: gutsCutout,
 		intro: gutsTexts.intro,
+		traits: ["Gruff", "Cynical", "Violent", "Honest"],
 	},
 
 	{
@@ -21,6 +22,7 @@ export const CHARACTERS = [
 		image: griffithPoster,
 		cutout: griffithCutout,
 		intro: griffithTexts.intro,
+		traits: ["Intelligent", "Exemplary", "Dedicated", "Divine"],
 	},
 
 	{
@@ -28,6 +30,7 @@ export const CHARACTERS = [
 		image: cascaPoster,
 		cutout: cascaCutout,
 		intro: cascaTexts.intro,
+		traits: ["Passionate", "Kind-Hearted", "Capable", "Beautiful"],
 	},
 
 	{
@@ -35,5 +38,6 @@ export const CHARACTERS = [
 		image: zoddPoster,
 		cutout: zoddCutout,
 		intro: zoddTexts.intro,
+		traits: ["Brutal", "Violent", "Strong", "Deadly"],
 	},
 ];

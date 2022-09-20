@@ -41,7 +41,8 @@
 	align-items: flex-start;
 }
 
-.details__name {
+.details__name,
+.personality__title {
 	color: var(--text-color);
 	font-family: var(--secondary-font);
 	font-size: var(--xl);
@@ -62,6 +63,34 @@
 	font-size: var(--md);
 	font-family: var(--secondary-font);
 	font-weight: bold;
+}
+
+.details__personality {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: var(--small-gap);
+}
+
+.traits__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--normal-gap);
+}
+
+.trait {
+	padding: var(--medium-padding);
+	background-color: var(--light-accent);
+	border-radius: var(--card-radius);
+	box-shadow: var(--card-shadow);
+
+	font-family: var(--secondary-font);
+	font-size: var(--lg);
+	text-shadow: var(--text-shadow);
+	letter-spacing: var(--text-spacing);
 }
 
 /**TABLET*/
@@ -107,5 +136,9 @@
 
 	.details__name {
 		align-self: center;
+	}
+
+	.details__personality {
+		align-items: center;
 	}
 }

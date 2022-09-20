@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/components/Character.css";
 
-const Character = ({ name, cardImage, cutoutImage, intro, index }) => {
+const Character = ({ name, cardImage, cutoutImage, intro, traits, index }) => {
 	const characterDetails = {
 		name: name,
 		cutout: cutoutImage,
 		intro: intro,
+		traits: traits,
 	};
 	let navigate = useNavigate();
 	const handleCharacterClick = () => {

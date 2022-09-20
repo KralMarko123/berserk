@@ -2,6 +2,8 @@
 	width: 100%;
 	height: var(--header-footer-height);
 
+	padding: var(--small-padding) 0;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -14,6 +16,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 	gap: var(--small-gap);
 }
 
@@ -23,6 +26,7 @@
 	font-size: var(--sm);
 	letter-spacing: var(--text-spacing);
 	text-shadow: var(--text-shadow);
+	text-align: center;
 }
 
 .footer__text p a {

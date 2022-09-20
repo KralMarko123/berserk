@@ -39,6 +39,7 @@ const Characters = () => {
 								cardImage={character.image}
 								cutoutImage={character.cutout}
 								intro={character.intro}
+								traits={character.traits}
 								index={i}
 							/>
 						))}

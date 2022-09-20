@@ -7,7 +7,7 @@ import Footer from "../components/layout/Footer";
 
 const Details = () => {
 	const { state } = useLocation();
-	const { name, cutout, intro } = state;
+	const { name, cutout, intro, traits } = state;
 
 	return (
 		<>
@@ -41,6 +41,16 @@ const Details = () => {
 								>
 									{paragraph}
 								</motion.p>
+							))}
+						</div>
+					</div>
+					<div className="details__personality">
+						<span className="personality__title">Personality</span>
+						<div className="traits__list">
+							{traits.map((trait) => (
+								<p key={trait} className="trait">
+									{trait}
+								</p>
 							))}
 						</div>
 					</div>
