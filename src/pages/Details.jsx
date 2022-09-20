@@ -3,10 +3,11 @@ import Header from "../components/layout/Header";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../styles/pages/Details.css";
+import Footer from "../components/layout/Footer";
 
 const Details = () => {
 	const { state } = useLocation();
-	const { name, cutout, color, intro } = state;
+	const { name, cutout, intro } = state;
 
 	return (
 		<>
@@ -25,7 +26,6 @@ const Details = () => {
 						<div className="details__intro__desc">
 							<motion.span
 								className="details__name"
-								style={{ color: color }}
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ type: "tween", duration: 0.5 }}
@@ -46,6 +46,7 @@ const Details = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

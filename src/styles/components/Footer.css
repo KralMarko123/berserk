@@ -1,0 +1,26 @@
+.footer {
+	width: 100%;
+	height: var(--header-footer-height);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__text {
+	width: var(--container-width);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--small-gap);
+}
+
+.footer__text p {
+	color: var(--light-accent);
+	font-family: var(--secondary-font);
+	font-size: var(--sm);
+	letter-spacing: var(--text-spacing);
+	text-shadow: var(--text-shadow);
+}

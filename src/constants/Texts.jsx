@@ -15,3 +15,25 @@ export const gutsTexts = {
 		"Following the horrors of the Eclipse prompted by Griffith, Guts embarks on a two-year war against the God Hand and apostles, becoming increasingly embittered on his one-track quest for retribution. He in time realizes protecting his regressed lover is more important to him, as well as something he cannot do alone, and thus puts aside his quest for revenge while fostering camaraderie with new companions.",
 	],
 };
+
+export const griffithTexts = {
+	intro: [
+		"Griffith is the current leader of the reborn Band of the Hawk and supreme commander of the Midland Regular Army. Having been at the fore of many battles, he has amassed a reputation as a savior across the continent, and is revered as the 'Falcon of Light'.",
+		"As the leader of the original Band of the Hawk, he and his mercenaries are able to end the Hundred-Year War and bring peace to the war-torn kingdom of Midland. Following the desertion of his most trusted confidant Guts, Griffith beds Princess Charlotte on impulse, bringing about his imprisonment, year-long crippling torture, and the seeming demise of his dream. Though he is eventually rescued by the band, his state of extreme invalidity and undying desire to obtain his own kingdom compel him to sacrifice his comrades during the fifth Eclipse, for kinsmanship with the God Hand as their fifth member Femto – a demonic, idealized version of himself stripped of his human inhibitions. In time, he is incarnated into the Physical World, concerned solely with the realization of his dream, which comes to pass with his thwarting of the Kushan invasion of Midland, the Great Roar of the Astral World he prompts, and the rise of his utopian capital city, Falconia.",
+	],
+};
+
+export const cascaTexts = {
+	intro: [
+		"Casca is a former unit commander of the Band of the Hawk and an estranged companion of Guts.",
+		"Originally a callow peasant girl living in a remote mountain village, she develops into a well-attuned warrior upon joining the Band of the Hawk and aids greatly in the group's storied successes during the Hundred-Year War. Following Guts' departure and Griffith's subsequent imprisonment, she is forced to assume the position as the band's leader, succeeding in preventing the complete annihilation of the Band of the Hawk and rescuing Griffith from the Tower of Rebirth. Crippled from his horrifying year-long torture and demoralized by his fall from grace, Griffith ultimately invokes the Eclipse, in which he is reborn as the fifth God Hand member Femto and rapes Casca to spite Guts. Having physically survived the ordeal, she regresses into an infantile and largely mute amnesiac.",
+		"Guts and his newly formed traveling party are currently preoccupied with the restoration of her fragmented mind in Elfhelm.",
+	],
+};
+
+export const zoddTexts = {
+	intro: [
+		"Zodd is a legendary swordsman and powerful apostle said to have killed thousands of adversaries on the battlefield. After intervals of inactivity and purported death, Zodd resurfaces on the battlefield to continue his slaughter, having done so unmitigated for roughly 300 years.",
+		"He possesses an intense thirst for battle only sated by his long-spanning rivalry with the Skull Knight. His search for the 'ultimate strong one' leads him to submit to an incarnated Griffith, whom he serves as one of the White Falcon's most trusted warriors in the reborn Band of the Hawk.",
+	],
+};

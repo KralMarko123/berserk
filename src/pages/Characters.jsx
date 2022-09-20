@@ -4,6 +4,7 @@ import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
 import { CHARACTERS } from "../constants/Characters";
 import "../styles/pages/Characters.css";
+import Footer from "../components/layout/Footer";
 
 const Characters = () => {
 	return (
@@ -37,7 +38,6 @@ const Characters = () => {
 								name={character.name}
 								cardImage={character.image}
 								cutoutImage={character.cutout}
-								color={character.color}
 								intro={character.intro}
 								index={i}
 							/>
@@ -45,6 +45,7 @@ const Characters = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

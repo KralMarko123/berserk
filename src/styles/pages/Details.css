@@ -104,4 +104,8 @@
 
 		gap: var(--normal-gap);
 	}
+
+	.details__name {
+		align-self: center;
+	}
 }

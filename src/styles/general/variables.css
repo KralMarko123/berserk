@@ -23,7 +23,7 @@
 	--logo-width: 50px;
 
 	/**HEIGHTS*/
-	--header-height: 100px;
+	--header-footer-height: 100px;
 
 	/**PADDINGS*/
 	--simple-padding: 1em;
@@ -54,7 +54,7 @@
 		--logo-width: 40px;
 
 		/**HEIGHTS*/
-		--header-height: 80px;
+		--header-footer-height: 80px;
 	}
 }
 
@@ -72,10 +72,10 @@
 		--logo-width: 30px;
 
 		/**HEIGHTS*/
-		--header-height: 60px;
+		--header-footer-height: 60px;
 
 		/**GAPS*/
-		--normal-gap: 0.5em;
-		--small-gap: 0.25em;
+		--normal-gap: 0.75em;
+		--small-gap: 0.35em;
 	}
 }

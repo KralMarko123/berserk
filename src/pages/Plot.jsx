@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
 import { plotTextParagraphs } from "../constants/Texts";
 import "../styles/pages/Plot.css";
+import Footer from "../components/layout/Footer";
 
 const Plot = () => {
 	return (
@@ -23,6 +24,7 @@ const Plot = () => {
 					))}
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

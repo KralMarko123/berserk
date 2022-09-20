@@ -3,6 +3,7 @@ import berserkLogo from "../assets/images/berserk_logo.png";
 import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
 import "../styles/pages/Home.css";
+import Footer from "../components/layout/Footer";
 
 const Home = () => {
 	return (
@@ -37,6 +38,7 @@ const Home = () => {
 					</motion.div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };
