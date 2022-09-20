@@ -9,7 +9,6 @@ import { ROUTES } from "./Routes";
 const MyRoutes = () => {
 	return (
 		<Routes>
-			<Route path="" element={<Home />} />
 			<Route path={ROUTES.home} element={<Home />} />
 			<Route path={ROUTES.plot} element={<Plot />} />
 			<Route path={ROUTES.characters} element={<Characters />} />
