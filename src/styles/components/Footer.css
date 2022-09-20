@@ -24,3 +24,13 @@
 	letter-spacing: var(--text-spacing);
 	text-shadow: var(--text-shadow);
 }
+
+.footer__text p a {
+	text-decoration: none;
+	color: var(--light-accent);
+}
+
+.footer__text p a:hover {
+	cursor: pointer;
+	color: var(--text-color);
+}
