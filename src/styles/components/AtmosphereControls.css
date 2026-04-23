@@ -1,0 +1,90 @@
+.atmosphere {
+	position: fixed;
+	right: clamp(0.75rem, 2vw, 1.5rem);
+	bottom: clamp(0.75rem, 2vw, 1.5rem);
+	z-index: 5;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.atmosphere__button {
+	width: 44px;
+	height: 44px;
+	border: 1px solid var(--line-color);
+	border-radius: 50%;
+	background: color-mix(in srgb, var(--surface-color) 88%, transparent);
+	box-shadow: var(--elevated-shadow);
+	backdrop-filter: blur(14px);
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.atmosphere__button:hover,
+.atmosphere__button:focus-visible,
+.atmosphere__button.is-active {
+	border-color: var(--blood-color);
+	background: var(--blood-color);
+	transform: translateY(-2px);
+	outline: none;
+}
+
+.atmosphere__icon {
+	position: relative;
+	display: block;
+	width: 18px;
+	height: 18px;
+	color: var(--text-color);
+}
+
+.atmosphere__icon--moon {
+	border-radius: 50%;
+	box-shadow: -5px 0 0 0 currentColor;
+	transform: translateX(5px);
+}
+
+.atmosphere__icon--sun {
+	border: 2px solid currentColor;
+	border-radius: 50%;
+}
+
+.atmosphere__icon--sun::before,
+.atmosphere__icon--sun::after {
+	content: "";
+	position: absolute;
+	inset: -6px 7px;
+	border-top: 4px solid currentColor;
+	border-bottom: 4px solid currentColor;
+}
+
+.atmosphere__icon--sun::after {
+	transform: rotate(90deg);
+}
+
+.atmosphere__icon--play {
+	width: 0;
+	height: 0;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+	border-left: 14px solid currentColor;
+	transform: translateX(2px);
+}
+
+.atmosphere__icon--pause::before,
+.atmosphere__icon--pause::after {
+	content: "";
+	position: absolute;
+	top: 1px;
+	width: 5px;
+	height: 16px;
+	background: currentColor;
+}
+
+.atmosphere__icon--pause::before {
+	left: 3px;
+}
+
+.atmosphere__icon--pause::after {
+	right: 3px;
+}

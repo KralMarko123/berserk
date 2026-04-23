@@ -5,9 +5,9 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer__text">
-				<p>© 1990 Berserk, Kentaro Miura.</p>
+				<p>Fan tribute to Berserk and Kentaro Miura.</p>
 				<p>
-					<a href="https://github.com/KralMarko123/berserk" target="_blank">
+					<a href="https://github.com/KralMarko123/berserk" target="_blank" rel="noreferrer">
 						Source code here.
 					</a>
 				</p>

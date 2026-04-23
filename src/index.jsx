@@ -6,4 +6,8 @@ import "./styles/general/page.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-<React.StrictMode>{root.render(<App />)}</React.StrictMode>;
+root.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
+);

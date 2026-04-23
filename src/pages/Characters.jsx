@@ -20,7 +20,7 @@ const Characters = () => {
 						>
 							Each character has their own story. Every step along the way has brought joy or sorrow
 							into their lives. They represent different traits, beliefs, and philosophies. Kentaro
-							highlights every single one throughout the manga using exhilirating action, compelling
+							highlights every single one throughout the manga using exhilarating action, compelling
 							dialog, and spectacular panels.
 						</motion.p>
 						<motion.p
@@ -33,15 +33,7 @@ const Characters = () => {
 					</div>
 					<div className="characters__list">
 						{CHARACTERS.map((character, i) => (
-							<Character
-								key={i}
-								name={character.name}
-								cardImage={character.image}
-								cutoutImage={character.cutout}
-								intro={character.intro}
-								traits={character.traits}
-								index={i}
-							/>
+							<Character key={character.slug} character={character} index={i} />
 						))}
 					</div>
 				</div>

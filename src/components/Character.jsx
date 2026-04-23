@@ -4,16 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/components/Character.css";
 
-const Character = ({ name, cardImage, cutoutImage, intro, traits, index }) => {
+const Character = ({ character, index }) => {
 	const characterDetails = {
-		name: name,
-		cutout: cutoutImage,
-		intro: intro,
-		traits: traits,
+		...character,
 	};
 	let navigate = useNavigate();
 	const handleCharacterClick = () => {
-		navigate(`details/${name}`, { state: { ...characterDetails } });
+		navigate(`details/${character.slug}`, { state: { ...characterDetails } });
 	};
 
 	return (
@@ -24,9 +21,11 @@ const Character = ({ name, cardImage, cutoutImage, intro, traits, index }) => {
 			transition={{ type: "spring", duration: 0.25, delay: 0.75 + 0.15 * index }}
 			onClick={() => handleCharacterClick()}
 		>
-			<img src={cardImage} alt={`${name}-image`} className="character__image" />
+			<img src={character.image} alt={`${character.name}`} className="character__image" />
 			<div className="character__overlay">
-				<h3 className="character__name">{name}</h3>
+				<span className="character__epithet">{character.epithet}</span>
+				<h3 className="character__name">{character.name}</h3>
+				<p className="character__arc">{character.arc}</p>
 			</div>
 		</motion.div>
 	);

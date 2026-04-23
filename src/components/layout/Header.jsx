@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { VARIANTS } from "../../constants/AnimationVariants";
 import logo from "../../assets/images/brand.png";
@@ -24,11 +24,30 @@ const Header = ({ shouldAnimate }) => {
 					onClick={() => navigate("/")}
 				/>
 				<ul className="header__nav__list">
-					<li className="nav__list__item" onClick={() => navigate("/characters")}>
-						Characters
+					<li>
+						<NavLink className="nav__list__item" to="/characters">
+							Characters
+						</NavLink>
 					</li>
-					<li className="nav__list__item" onClick={() => navigate("/plot")}>
-						Plot
+					<li>
+						<NavLink className="nav__list__item" to="/plot">
+							Plot
+						</NavLink>
+					</li>
+					<li>
+						<NavLink className="nav__list__item" to="/resources">
+							Resources
+						</NavLink>
+					</li>
+					<li>
+						<NavLink className="nav__list__item" to="/artifacts">
+							Artifacts
+						</NavLink>
+					</li>
+					<li>
+						<NavLink className="nav__list__item" to="/community">
+							Community
+						</NavLink>
 					</li>
 				</ul>
 			</nav>

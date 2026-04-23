@@ -1,60 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap");
 :root {
-	/**COLORS*/
-	--dark-main: rgb(23, 23, 23);
-	--dark-accent: rgb(43, 43, 43);
-	--light-main: rgb(237, 237, 237);
-	--light-accent: rgb(187, 20, 20);
+	--dark-main: #101010;
+	--dark-accent: #232323;
+	--light-main: #ece7de;
+	--light-accent: #b91f1f;
+	--blood-color: #b91f1f;
+	--blood-deep: #5f0d0d;
+	--ash-color: #89837d;
+	--paper-color: #d8d0c1;
+	--surface-color: #181717;
+	--surface-raised: #242120;
+	--line-color: rgba(236, 231, 222, 0.16);
 	--text-color: var(--light-main);
+	--muted-color: #bcb4aa;
+	--page-bg: #101010;
+	--grain-opacity: 0.14;
 
-	/**TEXT*/
 	--main-font: "Red Hat Display", sans-serif;
 	--secondary-font: "Cantora One", sans-serif;
 	--base: 18px;
+	--xxl: 4.8rem;
 	--xl: 3rem;
 	--lg: 2rem;
-	--md: 1.5rem;
-	--sm: 1.15rem;
-	--text-spacing: 1px;
+	--md: 1.35rem;
+	--sm: 1rem;
+	--text-spacing: 0;
 
-	/**WIDTHS*/
-	--container-width: 1200px;
+	--container-width: min(1180px, calc(100vw - 2rem));
 	--logo-width: 50px;
 
-	/**HEIGHTS*/
-	--header-footer-height: 100px;
+	--header-footer-height: 84px;
 
-	/**PADDINGS*/
 	--simple-padding: 1em;
 	--medium-padding: 0.5em;
 	--small-padding: 0.25em;
 
-	/**GAPS*/
 	--normal-gap: 1em;
 	--small-gap: 0.5em;
 
-	/**UTILITY*/
-	--card-border: solid 3px var(--dark-accent);
-	--card-radius: 10px;
-	--card-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
-	--text-shadow: 3px 4px 0px var(--dark-accent);
+	--card-border: 1px solid var(--line-color);
+	--card-radius: 8px;
+	--card-shadow: 0 20px 50px rgba(0, 0, 0, 0.36);
+	--elevated-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+	--text-shadow: 0 3px 0 rgba(0, 0, 0, 0.65);
+}
+
+body[data-theme="ember"] {
+	--page-bg: #d3c7b4;
+	--surface-color: #ede5d7;
+	--surface-raised: #f8efe1;
+	--text-color: #191716;
+	--muted-color: #4f4640;
+	--line-color: rgba(25, 23, 22, 0.18);
+	--dark-main: #d3c7b4;
+	--dark-accent: #b7aa98;
+	--grain-opacity: 0.08;
+	--text-shadow: none;
 }
 
 /**TABLET*/
 @media (min-width: 768px) and (max-width: 1199px) {
 	:root {
-		/**TEXT*/
 		--xl: 2rem;
 		--lg: 1.5rem;
 		--md: 1.25rem;
 		--sm: 1rem;
-
-		/**WIDTHS*/
-		--container-width: 95%;
 		--logo-width: 40px;
-
-		/**HEIGHTS*/
 		--header-footer-height: 80px;
 	}
 }
@@ -62,20 +74,12 @@
 /**MOBILE*/
 @media (max-width: 767px) {
 	:root {
-		/**TEXT*/
+		--xxl: 3rem;
 		--xl: 1.75rem;
 		--lg: 1.25rem;
 		--md: 1rem;
 		--sm: 0.85rem;
-
-		/**WIDTHS*/
-		--container-width: 90%;
 		--logo-width: 30px;
-
-		/**HEIGHTS*/
-		--header-footer-height: 60px;
-
-		/**GAPS*/
 		--normal-gap: 0.75em;
 		--small-gap: 0.35em;
 	}

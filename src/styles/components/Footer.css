@@ -1,8 +1,9 @@
 .footer {
 	width: 100%;
-	height: var(--header-footer-height);
+	min-height: var(--header-footer-height);
 
-	padding: var(--small-padding) 0;
+	padding: 1.25rem 0;
+	border-top: 1px solid var(--line-color);
 
 	display: flex;
 	justify-content: center;
@@ -21,20 +22,17 @@
 }
 
 .footer__text p {
-	color: var(--light-accent);
+	color: var(--muted-color);
 	font-family: var(--secondary-font);
-	font-size: var(--sm);
-	letter-spacing: var(--text-spacing);
-	text-shadow: var(--text-shadow);
+	font-size: 0.9rem;
 	text-align: center;
 }
 
 .footer__text p a {
 	text-decoration: none;
-	color: var(--light-accent);
+	color: var(--blood-color);
 }
 
 .footer__text p a:hover {
-	cursor: pointer;
 	color: var(--text-color);
 }
