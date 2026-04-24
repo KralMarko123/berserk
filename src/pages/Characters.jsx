@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Character from "../components/Character";
 import Header from "../components/layout/Header";
 import { AnimatePresence, motion } from "framer-motion";
@@ -11,15 +11,19 @@ const CATEGORY_ORDER = [
 	"Strugglers",
 	"Hawks",
 	"Allies",
+	"Holy",
 	"Midland",
 	"Falconia",
+	"Kushan",
 	"Apostles",
+	"God Hand",
 	"Mythic",
 	"Victims",
 ];
 
 const Characters = () => {
 	const [activeCategory, setActiveCategory] = useState("All");
+	const [hasPlayedInitialReveal, setHasPlayedInitialReveal] = useState(false);
 	const categoryCounts = useMemo(() => {
 		const counts = CHARACTERS.reduce(
 			(acc, character) => ({
@@ -45,6 +49,11 @@ const Characters = () => {
 				: CHARACTERS.filter((character) => character.category === activeCategory),
 		[activeCategory]
 	);
+
+	useEffect(() => {
+		const timer = window.setTimeout(() => setHasPlayedInitialReveal(true), 700);
+		return () => window.clearTimeout(timer);
+	}, []);
 
 	return (
 		<>
@@ -93,7 +102,12 @@ const Characters = () => {
 							transition={{ duration: 0.22, ease: "easeOut" }}
 						>
 							{visibleCharacters.map((character, i) => (
-								<Character key={`${activeCategory}-${character.slug}`} character={character} index={i} />
+								<Character
+									key={`${activeCategory}-${character.slug}`}
+									character={character}
+									index={i}
+									shouldStagger={!hasPlayedInitialReveal}
+								/>
 							))}
 						</motion.div>
 					</AnimatePresence>
