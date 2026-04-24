@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Character from "../components/Character";
 import Header from "../components/layout/Header";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { CHARACTERS } from "../constants/Characters";
 import Footer from "../components/layout/Footer";
 import "../styles/pages/Characters.css";
@@ -83,11 +83,20 @@ const Characters = () => {
 							</button>
 						))}
 					</div>
-					<div key={activeCategory} className="characters__list">
-						{visibleCharacters.map((character, i) => (
-							<Character key={`${activeCategory}-${character.slug}`} character={character} index={i} />
-						))}
-					</div>
+					<AnimatePresence mode="wait">
+						<motion.div
+							key={activeCategory}
+							className="characters__list"
+							initial={{ opacity: 0, y: 10 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -10 }}
+							transition={{ duration: 0.22, ease: "easeOut" }}
+						>
+							{visibleCharacters.map((character, i) => (
+								<Character key={`${activeCategory}-${character.slug}`} character={character} index={i} />
+							))}
+						</motion.div>
+					</AnimatePresence>
 				</div>
 			</div>
 			<Footer />
