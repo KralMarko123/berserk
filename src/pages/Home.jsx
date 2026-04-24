@@ -1,11 +1,13 @@
 import React from "react";
-import berserkLogo from "../assets/images/berserk_logo.png";
-import gutsCutout from "../assets/images/guts_cutout.png";
 import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
 import "../styles/pages/Home.css";
 import Footer from "../components/layout/Footer";
 import { Link } from "react-router-dom";
+import { getImageAsset } from "../constants/media";
+
+const berserkLogo = getImageAsset("berserk_logo.png");
+const gutsCutout = getImageAsset("guts/guts_cutout.png");
 
 const Home = () => {
 	return (

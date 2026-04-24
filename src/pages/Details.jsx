@@ -96,7 +96,11 @@ const Details = () => {
 					</section>
 					<section className="details__gallery">
 						<h2 className="section-title">Image gallery</h2>
-						<ImageCarousel title={`${name} gallery`} items={galleryItems} />
+						<ImageCarousel
+							title={`${name} gallery`}
+							items={galleryItems}
+							emptyMessage={`No gallery images have been catalogued for ${name} yet.`}
+						/>
 					</section>
 					<section className="details__links">
 						<h2 className="section-title">Lore videos</h2>

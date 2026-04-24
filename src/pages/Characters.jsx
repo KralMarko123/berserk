@@ -1,12 +1,51 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Character from "../components/Character";
 import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
 import { CHARACTERS } from "../constants/Characters";
-import "../styles/pages/Characters.css";
 import Footer from "../components/layout/Footer";
+import "../styles/pages/Characters.css";
+
+const CATEGORY_ORDER = [
+	"All",
+	"Strugglers",
+	"Hawks",
+	"Allies",
+	"Midland",
+	"Falconia",
+	"Apostles",
+	"Mythic",
+	"Victims",
+];
 
 const Characters = () => {
+	const [activeCategory, setActiveCategory] = useState("All");
+	const categoryCounts = useMemo(() => {
+		const counts = CHARACTERS.reduce(
+			(acc, character) => ({
+				...acc,
+				[character.category]: (acc[character.category] || 0) + 1,
+			}),
+			{}
+		);
+
+		return {
+			All: CHARACTERS.length,
+			...counts,
+		};
+	}, []);
+	const categories = useMemo(
+		() => CATEGORY_ORDER.filter((category) => categoryCounts[category]),
+		[categoryCounts]
+	);
+	const visibleCharacters = useMemo(
+		() =>
+			activeCategory === "All"
+				? CHARACTERS
+				: CHARACTERS.filter((character) => character.category === activeCategory),
+		[activeCategory]
+	);
+
 	return (
 		<>
 			<Header shouldAnimate={false} />
@@ -31,9 +70,22 @@ const Characters = () => {
 							Click on any one of them down below to immerse yourself in their world.
 						</motion.p>
 					</div>
-					<div className="characters__list">
-						{CHARACTERS.map((character, i) => (
-							<Character key={character.slug} character={character} index={i} />
+					<div className="characters__filters" aria-label="Character categories">
+						{categories.map((category) => (
+							<button
+								key={category}
+								type="button"
+								className={`characters__chip ${activeCategory === category ? "is-active" : ""}`}
+								onClick={() => setActiveCategory(category)}
+							>
+								<span>{category}</span>
+								<strong>{categoryCounts[category]}</strong>
+							</button>
+						))}
+					</div>
+					<div key={activeCategory} className="characters__list">
+						{visibleCharacters.map((character, i) => (
+							<Character key={`${activeCategory}-${character.slug}`} character={character} index={i} />
 						))}
 					</div>
 				</div>

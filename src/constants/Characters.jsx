@@ -1,152 +1,290 @@
-import gutsPoster from "../assets/images/guts.jpg";
-import gutsCutout from "../assets/images/guts_cutout.png";
-import griffithPoster from "../assets/images/griffith.jpg";
-import griffithCutout from "../assets/images/griffith_cutout.png";
-import cascaPoster from "../assets/images/casca.jpg";
-import cascaCutout from "../assets/images/casca_cutout.png";
-import zoddPoster from "../assets/images/zodd.jpg";
-import zoddCutout from "../assets/images/zodd_cutout.png";
-import skullKnightPoster from "../assets/images/skull-knight.jpg";
-import farnesePoster from "../assets/images/farnese.jpg";
-import { cascaTexts, griffithTexts, gutsTexts, zoddTexts } from "./Texts";
-import { CHARACTER_GALLERIES } from "./Collections";
+import { CHARACTER_GALLERIES, CHARACTER_MEDIA } from "./Collections";
+
+const createCharacter = ({
+	name,
+	slug,
+	category,
+	epithet,
+	intro,
+	traits,
+	arc,
+	videoQuery,
+	analysisQuery,
+	analysisLabel = "Character analysis",
+}) => ({
+	name,
+	slug,
+	category,
+	epithet,
+	image: CHARACTER_MEDIA[slug].image,
+	cutout: CHARACTER_MEDIA[slug].cutout,
+	intro,
+	traits,
+	arc,
+	gallery: CHARACTER_GALLERIES[slug] || [],
+	videos: [
+		{
+			label: `${name} lore videos`,
+			url: `https://www.youtube.com/results?search_query=${encodeURIComponent(videoQuery)}`,
+		},
+		{
+			label: analysisLabel,
+			url: `https://www.youtube.com/results?search_query=${encodeURIComponent(analysisQuery)}`,
+		},
+	],
+});
 
 export const CHARACTERS = [
-	{
+	createCharacter({
 		name: "Guts",
 		slug: "guts",
+		category: "Strugglers",
 		epithet: "The Black Swordsman",
-		image: gutsPoster,
-		cutout: gutsCutout,
-		intro: gutsTexts.intro,
+		intro: [
+			"Guts, renowned as the Black Swordsman, is a former mercenary and branded wanderer who moves through the world in a constant struggle between survival, rage, and attachment.",
+			"Once defined almost entirely by endurance, he finds purpose with the Band of the Hawk, then loses that world in a way that turns revenge into a way of living.",
+			"Over time, Berserk shifts his story from pure retaliation toward something harder: learning how to protect others without abandoning the parts of himself forged in violence.",
+		],
 		traits: ["Relentless", "Guarded", "Tender beneath armor", "Defiant"],
 		arc: "From survival to vengeance to the terrifying work of protecting what remains.",
-		gallery: CHARACTER_GALLERIES.guts,
-		videos: [
-			{
-				label: "Guts lore videos",
-				url: "https://www.youtube.com/results?search_query=Berserk+Guts+lore",
-			},
-			{
-				label: "Black Swordsman analysis",
-				url: "https://www.youtube.com/results?search_query=Berserk+Black+Swordsman+analysis",
-			},
-		],
-	},
-
-	{
+		videoQuery: "Berserk Guts lore",
+		analysisQuery: "Berserk Black Swordsman analysis",
+		analysisLabel: "Black Swordsman analysis",
+	}),
+	createCharacter({
 		name: "Griffith",
 		slug: "griffith",
+		category: "Falconia",
 		epithet: "The Falcon of Light",
-		image: griffithPoster,
-		cutout: griffithCutout,
-		intro: griffithTexts.intro,
+		intro: [
+			"Griffith is one of Berserk's most magnetic figures: a commander whose beauty, discipline, and ambition make him feel impossible even before the supernatural fully enters the story.",
+			"As leader of the original Band of the Hawk, he turns mercenaries into legends and war into the stage for a dream of kingship.",
+			"That dream survives the ruin of his human body and re-emerges in forms far more horrifying, making Griffith both a ruined man and one of the story's grandest engines of catastrophe.",
+		],
 		traits: ["Magnetic", "Visionary", "Possessive", "Terrifyingly composed"],
 		arc: "A dream so brilliant that it becomes indistinguishable from ruin.",
-		gallery: CHARACTER_GALLERIES.griffith,
-		videos: [
-			{
-				label: "Griffith lore videos",
-				url: "https://www.youtube.com/results?search_query=Berserk+Griffith+lore",
-			},
-			{
-				label: "Falcon of Light analysis",
-				url: "https://www.youtube.com/results?search_query=Berserk+Griffith+character+analysis",
-			},
-		],
-	},
-
-	{
+		videoQuery: "Berserk Griffith lore",
+		analysisQuery: "Berserk Griffith character analysis",
+		analysisLabel: "Falcon of Light analysis",
+	}),
+	createCharacter({
 		name: "Casca",
 		slug: "casca",
+		category: "Strugglers",
 		epithet: "Commander of the Hawks",
-		image: cascaPoster,
-		cutout: cascaCutout,
-		intro: cascaTexts.intro,
+		intro: [
+			"Casca is one of the Band of the Hawk's strongest warriors and one of Berserk's deepest emotional centers, carrying military authority, vulnerability, and pride all at once.",
+			"Her story is inseparable from the Hawks' rise, Griffith's ambition, and Guts' gradual understanding of responsibility beyond himself.",
+			"The trauma she survives after the Eclipse reshapes the entire series, making her not only a character to protect, but also a measure of what healing in Berserk can and cannot mean.",
+		],
 		traits: ["Loyal", "Capable", "Proud", "Deeply wounded"],
 		arc: "A commander, survivor, and emotional center whose recovery refuses to be simple.",
-		gallery: CHARACTER_GALLERIES.casca,
-		videos: [
-			{
-				label: "Casca lore videos",
-				url: "https://www.youtube.com/results?search_query=Berserk+Casca+lore",
-			},
-			{
-				label: "Casca character analysis",
-				url: "https://www.youtube.com/results?search_query=Berserk+Casca+character+analysis",
-			},
-		],
-	},
-
-	{
+		videoQuery: "Berserk Casca lore",
+		analysisQuery: "Berserk Casca character analysis",
+		analysisLabel: "Casca character analysis",
+	}),
+	createCharacter({
 		name: "Zodd",
 		slug: "zodd",
+		category: "Apostles",
 		epithet: "Nosferatu Zodd",
-		image: zoddPoster,
-		cutout: zoddCutout,
-		intro: zoddTexts.intro,
+		intro: [
+			"Zodd is a legendary apostle and battlefield myth whose appearances announce that ordinary war has given way to something older and more monstrous.",
+			"He fights with a hunger that feels almost devotional, always searching for worthy opponents and recognizing greatness in others through combat rather than speech.",
+			"Because of that, Zodd often feels less like a random monster and more like a herald of Berserk's deeper laws of strength, fate, and ruin.",
+		],
 		traits: ["Battle-hungry", "Ancient", "Honorable in combat", "Monstrous"],
 		arc: "The immortal warning sign that the battlefield is only the surface of the world.",
-		gallery: CHARACTER_GALLERIES.zodd,
-		videos: [
-			{
-				label: "Zodd lore videos",
-				url: "https://www.youtube.com/results?search_query=Berserk+Zodd+lore",
-			},
-			{
-				label: "Apostles explained",
-				url: "https://www.youtube.com/results?search_query=Berserk+Apostles+explained",
-			},
-		],
-	},
-
-	{
+		videoQuery: "Berserk Zodd lore",
+		analysisQuery: "Berserk Apostles explained",
+		analysisLabel: "Apostles explained",
+	}),
+	createCharacter({
 		name: "Skull Knight",
 		slug: "skull-knight",
+		category: "Mythic",
 		epithet: "The Struggler's Omen",
-		image: skullKnightPoster,
-		cutout: skullKnightPoster,
 		intro: [
 			"Skull Knight moves through Berserk like a prophecy with a blade, appearing where causality tightens and catastrophe is near.",
 			"His history is deliberately shadowed, but his connection to the God Hand, the Berserker Armor, and the long war against apostles makes him feel ancient even before the story names why.",
 		],
 		traits: ["Cryptic", "Ancient", "Noble", "Ruthlessly focused"],
 		arc: "A guide and warning whose help always carries the weight of something unfinished.",
-		gallery: CHARACTER_GALLERIES["skull-knight"],
-		videos: [
-			{
-				label: "Skull Knight lore videos",
-				url: "https://www.youtube.com/results?search_query=Berserk+Skull+Knight+lore",
-			},
-			{
-				label: "Causality explained",
-				url: "https://www.youtube.com/results?search_query=Berserk+causality+explained",
-			},
-		],
-	},
-
-	{
+		videoQuery: "Berserk Skull Knight lore",
+		analysisQuery: "Berserk causality explained",
+		analysisLabel: "Causality explained",
+	}),
+	createCharacter({
 		name: "Farnese",
 		slug: "farnese",
+		category: "Strugglers",
 		epithet: "From Zeal to Care",
-		image: farnesePoster,
-		cutout: farnesePoster,
 		intro: [
 			"Farnese begins as a severe noblewoman leading the Holy Iron Chain Knights, hiding fear and confusion beneath religious certainty.",
 			"Her journey becomes one of Berserk's most quietly moving transformations: from punishment and control toward humility, magic, and chosen responsibility.",
 		],
 		traits: ["Conflicted", "Devout", "Growing", "Protective"],
 		arc: "A brittle certainty slowly reshaped into compassion and courage.",
-		gallery: CHARACTER_GALLERIES.farnese,
-		videos: [
-			{
-				label: "Farnese lore videos",
-				url: "https://www.youtube.com/results?search_query=Berserk+Farnese+lore",
-			},
-			{
-				label: "Conviction arc analysis",
-				url: "https://www.youtube.com/results?search_query=Berserk+Conviction+arc+analysis",
-			},
+		videoQuery: "Berserk Farnese lore",
+		analysisQuery: "Berserk Conviction arc analysis",
+		analysisLabel: "Conviction arc analysis",
+	}),
+	createCharacter({
+		name: "Charlotte",
+		slug: "charlotte",
+		category: "Midland",
+		epithet: "Princess of Midland",
+		intro: [
+			"Charlotte begins as a sheltered royal figure, but in Berserk even innocence is political. Her tenderness, longing, and idealism become part of Griffith's ascent and part of Midland's imagined future.",
+			"She is less a warrior than a lens through which Miura shows how dreams, power, and devotion can look beautiful while hiding catastrophe.",
 		],
-	},
+		traits: ["Tender", "Idealistic", "Romantic", "Politically exposed"],
+		arc: "A royal figure whose softness is constantly pressed into the machinery of other ambitions.",
+		videoQuery: "Berserk Charlotte lore",
+		analysisQuery: "Berserk Charlotte Griffith analysis",
+		analysisLabel: "Golden Age relationship analysis",
+	}),
+	createCharacter({
+		name: "Schierke",
+		slug: "schierke",
+		category: "Strugglers",
+		epithet: "Witch of the Traveling Party",
+		intro: [
+			"Schierke brings a different kind of intelligence to Berserk: disciplined, mystical, and surprisingly calm in a world that keeps trying to tear itself open.",
+			"Through her, the manga explains magic, the astral realm, and the cost of holding Guts together when rage starts to become its own being.",
+		],
+		traits: ["Wise", "Composed", "Protective", "Spiritually alert"],
+		arc: "A young witch who turns knowledge into care, restraint, and survival.",
+		videoQuery: "Berserk Schierke lore",
+		analysisQuery: "Berserk Schierke analysis",
+	}),
+	createCharacter({
+		name: "Serpico",
+		slug: "serpico",
+		category: "Strugglers",
+		epithet: "The Hidden Blade",
+		intro: [
+			"Serpico is one of Berserk's most controlled presences: observant, polite, and often smiling just enough to hide how dangerous he really is.",
+			"His loyalty to Farnese and his instinct for survival make him feel like a tactician wandering through a world that usually rewards brute force.",
+		],
+		traits: ["Elegant", "Pragmatic", "Protective", "Deadly"],
+		arc: "A swordsman whose grace and caution become a different answer to violence.",
+		videoQuery: "Berserk Serpico lore",
+		analysisQuery: "Berserk Serpico character analysis",
+	}),
+	createCharacter({
+		name: "Judeau",
+		slug: "judeau",
+		category: "Hawks",
+		epithet: "The Hawk Who Understood Everyone",
+		intro: [
+			"Judeau gives the Band of the Hawk emotional intelligence without ever making a show of it. He notices what others avoid, understands people quickly, and rarely asks for attention.",
+			"In a series full of extreme personalities, his steadiness is part of what makes the Golden Age feel lived-in rather than merely legendary.",
+		],
+		traits: ["Perceptive", "Loyal", "Selfless", "Grounded"],
+		arc: "A quiet center of the Hawks whose decency becomes sharper in retrospect.",
+		videoQuery: "Berserk Judeau lore",
+		analysisQuery: "Berserk Band of the Hawk analysis Judeau",
+		analysisLabel: "Band of the Hawk analysis",
+	}),
+	createCharacter({
+		name: "Pippin",
+		slug: "pippin",
+		category: "Hawks",
+		epithet: "The Gentle Wall",
+		intro: [
+			"Pippin speaks little, but Miura gives him presence through steadiness, size, and the feeling that the Hawks are safer when he is nearby.",
+			"He represents one of Berserk's quiet miracles: even the broadest archetypes are treated with warmth and specificity.",
+		],
+		traits: ["Strong", "Quiet", "Dependable", "Warm-hearted"],
+		arc: "A massive protector whose silence never reads as emptiness.",
+		videoQuery: "Berserk Pippin lore",
+		analysisQuery: "Berserk Pippin analysis",
+	}),
+	createCharacter({
+		name: "Puck",
+		slug: "puck",
+		category: "Strugglers",
+		epithet: "Elf Companion",
+		intro: [
+			"Puck begins as comic relief and moral witness at the same time. He lets Berserk breathe without undoing its pain, which is harder than it sounds.",
+			"His presence keeps Guts readable during some of the story's bleakest stretches and reminds the reader that wonder still exists inside this brutal world.",
+		],
+		traits: ["Playful", "Compassionate", "Curious", "Loyal"],
+		arc: "An elf who keeps despair from sealing the story shut.",
+		videoQuery: "Berserk Puck lore",
+		analysisQuery: "Berserk Puck character analysis",
+	}),
+	createCharacter({
+		name: "Rickert",
+		slug: "rickert",
+		category: "Hawks",
+		epithet: "Witness to What Remains",
+		intro: [
+			"Rickert survives because he misses the Eclipse, and that absence becomes one of the series' most painful forms of survival.",
+			"As he grows older, he carries memory differently from Guts: less as rage, more as judgment, craft, and a refusal to worship what destroyed his friends.",
+		],
+		traits: ["Earnest", "Brave", "Observant", "Principled"],
+		arc: "A surviving Hawk whose moral clarity hardens with age.",
+		videoQuery: "Berserk Rickert lore",
+		analysisQuery: "Berserk Rickert analysis",
+	}),
+	createCharacter({
+		name: "Corkus",
+		slug: "corkus",
+		category: "Hawks",
+		epithet: "The Bitter Hawk",
+		intro: [
+			"Corkus is abrasive, jealous, often funny, and deeply human. He gives the Hawks social texture by being the guy who complains, resents, boasts, and still stays.",
+			"He matters because Berserk understands that a legendary band also includes the ordinary ego and fear of people who never imagined they would become part of myth.",
+		],
+		traits: ["Cynical", "Jealous", "Blunt", "Humanly insecure"],
+		arc: "A reminder that not every Hawk was noble, and that makes the loss feel fuller.",
+		videoQuery: "Berserk Corkus lore",
+		analysisQuery: "Berserk Corkus analysis",
+	}),
+	createCharacter({
+		name: "Godot",
+		slug: "godot",
+		category: "Allies",
+		epithet: "Blacksmith in Exile",
+		intro: [
+			"Godot represents one of Berserk's recurring sanctuaries: a rough place of labor, blunt truth, and temporary shelter.",
+			"His forge and his words help reframe Guts' journey away from pure revenge and toward the harder burden of living with other people.",
+		],
+		traits: ["Blunt", "Wise", "Protective", "World-weary"],
+		arc: "A smith whose shelter and criticism both help temper Guts.",
+		videoQuery: "Berserk Godot lore",
+		analysisQuery: "Berserk Godot analysis",
+	}),
+	createCharacter({
+		name: "Horse",
+		slug: "horse",
+		category: "Midland",
+		epithet: "War Mount of Midland's Brutality",
+		intro: [
+			"In Berserk even horses can become unsettling symbols of force, panic, class, and battlefield terror. They are not just transport; they often arrive carrying the mood of war with them.",
+			"This archive entry treats the horse image less as a single named individual and more as a piece of Berserk's visual language: mud, armor, charge, fear, and the animal body caught inside human violence.",
+		],
+		traits: ["Ferocious", "Instrumentalized", "Battle-scarred", "Unsettling"],
+		arc: "A supporting presence that helps make Berserk's war imagery feel physical and cruel.",
+		videoQuery: "Berserk horse scene analysis",
+		analysisQuery: "Berserk war imagery analysis",
+		analysisLabel: "War imagery analysis",
+	}),
+	createCharacter({
+		name: "Vargas",
+		slug: "vargas",
+		category: "Victims",
+		epithet: "Broken Witness of the Black Swordsman Arc",
+		intro: [
+			"Vargas is one of Berserk's early images of what apostolic evil leaves behind: a body wrecked, a life reduced to testimony, and a hatred that has nowhere healthy to go.",
+			"His brief presence helps define the cruelty of the world before the story widens into larger myth.",
+		],
+		traits: ["Traumatized", "Determined", "Fearful", "Consumed by vengeance"],
+		arc: "An early victim whose ruin teaches the scale of the horror ahead.",
+		videoQuery: "Berserk Vargas lore",
+		analysisQuery: "Berserk Black Swordsman arc analysis Vargas",
+		analysisLabel: "Black Swordsman arc analysis",
+	}),
 ];

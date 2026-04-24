@@ -1,67 +1,94 @@
-import gutsImage from "../assets/images/guts.jpg";
-import griffithImage from "../assets/images/griffith.jpg";
-import cascaImage from "../assets/images/casca.jpg";
-import zoddImage from "../assets/images/zodd.jpg";
-import skullKnightImage from "../assets/images/skull-knight.jpg";
-import schierkeImage from "../assets/images/schierke.jpg";
-import farneseImage from "../assets/images/farnese.jpg";
-import serpicoImage from "../assets/images/serpico.jpg";
-import judeauImage from "../assets/images/judeau.jpg";
-import charlotteImage from "../assets/images/charlotte.jpg";
-import gutsCutout from "../assets/images/guts_cutout.png";
-import griffithCutout from "../assets/images/griffith_cutout.png";
-import cascaCutout from "../assets/images/casca_cutout.png";
-import zoddCutout from "../assets/images/zodd_cutout.png";
-import brandImage from "../assets/images/brand.png";
-import puckImage from "../assets/images/puck.jpg";
-import rickertImage from "../assets/images/rickert.jpg";
-import pippinImage from "../assets/images/pippin.jpg";
-import corkusImage from "../assets/images/corkus.jpg";
-import godotImage from "../assets/images/godot.jpg";
-import horseImage from "../assets/images/horse.jpg";
+import { createGalleryItems, getImageAsset } from "./media";
 
-const galleryItem = (src, alt, caption) => ({ src, alt, caption });
+const uiBrand = getImageAsset("brand.png");
+
+const image = (path) => getImageAsset(path);
+
+const portraits = {
+	guts: image("guts/guts.jpg"),
+	griffith: image("griffith/griffith.jpg"),
+	casca: image("casca/casca.jpg"),
+	zodd: image("zodd/zodd.jpg"),
+	skullKnight: image("skullknight/skullknight.jpg"),
+	schierke: image("schierke/schierke.jpg"),
+	farnese: image("farnese/farnese.jpg"),
+	serpico: image("serpico/serpico.jpg"),
+	judeau: image("judeau/judeau.jpg"),
+	charlotte: image("charlotte/charlotte.jpg"),
+	puck: image("puck/puck.jpg"),
+	rickert: image("rickert/rickert.jpg"),
+	pippin: image("pippin/pippin.jpg"),
+	corkus: image("corkus/corkus.jpg"),
+	godot: image("godot/godot.jpg"),
+	horse: image("horse/horse.jpg"),
+	vargas: image("vargas/vargas.jpg"),
+};
+
+const cutouts = {
+	guts: image("guts/guts_cutout.png"),
+	griffith: image("griffith/griffith_cutout.png"),
+	casca: image("casca/casca_cutout.png"),
+	zodd: image("zodd/zodd_cutout.png"),
+	skullKnight: image("skullknight/skullknight_cutout.png"),
+	schierke: image("schierke/schierke_cutout.png"),
+	farnese: image("farnese/farnese_cutout.png"),
+	serpico: image("serpico/serpico_cutout.png"),
+	judeau: image("judeau/judeau_cutout.png"),
+	charlotte: image("charlotte/charlotte_cutout.png"),
+	puck: image("puck/puck_cutout.png"),
+	rickert: image("rickert/rickert_cutout.png"),
+	pippin: image("pippin/pippin_cutout.png"),
+	corkus: image("corkus/corkus_cutout.png"),
+	godot: image("godot/godot_cutout.png"),
+	vargas: image("vargas/vargas_cutout.webp"),
+};
+
+const makeCharacterGallery = (folder, altPrefix) =>
+	createGalleryItems(`${folder}/gallery/`, `${altPrefix} gallery`, "Archive image");
+
+const makeArtifactGallery = (folder, altPrefix) =>
+	createGalleryItems(`artifacts/${folder}/`, `${altPrefix} artifact`, "Artifact archive");
 
 export const PLOT_BEATS = [
 	{
 		title: "The Black Swordsman",
 		kicker: "A man too angry to die",
-		image: gutsImage,
+		image: portraits.guts,
 		text:
 			"Guts wanders through a hostile world with the Brand of Sacrifice pulling the dead toward him. The early story frames him as a terrifying myth before slowly revealing the wound beneath the armor.",
 	},
 	{
 		title: "Golden Age",
 		kicker: "Brotherhood, ambition, and the dream",
-		image: griffithImage,
+		image: portraits.griffith,
 		text:
 			"The Band of the Hawk gives Guts a place to belong, while Griffith's impossible dream lifts common mercenaries into history. The warmth of that bond is what makes its collapse unbearable.",
 	},
 	{
 		title: "The Eclipse",
 		kicker: "Causality closes its hand",
-		image: cascaImage,
+		image: portraits.casca,
 		text:
 			"The sacrifice of the Hawks turns friendship into a cosmic wound. Guts and Casca survive, but survival in Berserk is never clean; it becomes a sentence, a duty, and a reason to keep moving.",
 	},
 	{
 		title: "Conviction",
 		kicker: "Faith under a poisoned sky",
-		image: farneseImage,
+		image: portraits.farnese,
 		text:
 			"Religious terror, refugees, apostles, and the Holy See collide at St. Albion. The arc turns moral certainty into something unstable and introduces companions who will change Guts' path.",
 	},
 	{
 		title: "Millennium Falcon",
 		kicker: "The world cracks open",
-		image: zoddImage,
+		image: portraits.zodd,
 		text:
 			"Griffith returns to the physical world and builds toward Falconia while Guts gathers a fragile party around Casca. Monsters stop being hidden rumors and become the new weather of the world.",
 	},
 	{
 		title: "Fantasia",
 		kicker: "Healing is not the ending",
-		image: schierkeImage,
+		image: portraits.schierke,
 		text:
 			"Magic, memory, and impossible distance reshape the quest. Berserk lets tenderness exist beside horror, then asks whether restoration can survive the next turn of fate.",
 	},
@@ -117,11 +144,7 @@ export const ARTIFACTS = [
 			"It bleeds or aches when evil forces draw near.",
 			"It makes even quiet moments feel temporary.",
 		],
-		gallery: [
-			galleryItem(brandImage, "Brand of Sacrifice symbol", "The symbol that turns existence into a nightly siege."),
-			galleryItem(gutsImage, "Guts", "On Guts, the Brand becomes part of his silhouette and legend."),
-			galleryItem(cascaImage, "Casca", "On Casca, it underscores the tragedy carried past the Eclipse."),
-		],
+		gallery: makeArtifactGallery("brand-of-sacrifice", "Brand of Sacrifice"),
 	},
 	{
 		name: "Dragonslayer",
@@ -133,11 +156,7 @@ export const ARTIFACTS = [
 			"It becomes spiritually tainted through apostle blood and constant battle.",
 			"It reflects Guts' refusal to become elegant for the world's comfort.",
 		],
-		gallery: [
-			galleryItem(gutsCutout, "Guts cutout with Dragonslayer", "The sword reads as architecture before it reads as steel."),
-			galleryItem(gutsImage, "Guts holding the Dragonslayer", "Its silhouette is one of the series' defining images."),
-			galleryItem(zoddImage, "Zodd in battle", "The blade feels most alive when matched against monsters that justify its size."),
-		],
+		gallery: makeArtifactGallery("dragonslayer", "Dragonslayer"),
 	},
 	{
 		name: "Behelit",
@@ -149,11 +168,7 @@ export const ARTIFACTS = [
 			"It serves as a bridge between human collapse and apostle transformation.",
 			"It makes fate feel tactile and obscene.",
 		],
-		gallery: [
-			galleryItem(griffithImage, "Griffith portrait", "Griffith and the crimson Behelit are inseparable in the reader's memory."),
-			galleryItem(charlotteImage, "Charlotte portrait", "The dream of a kingdom gives the Behelit its cruelest context."),
-			galleryItem(skullKnightImage, "Skull Knight portrait", "Even when absent from frame, the Behelit haunts the larger war against causality."),
-		],
+		gallery: makeArtifactGallery("behelit", "Behelit"),
 	},
 	{
 		name: "Berserker Armor",
@@ -165,11 +180,7 @@ export const ARTIFACTS = [
 			"It also strips away restraint, memory, and bodily safety.",
 			"It needs companions around Guts to matter narratively.",
 		],
-		gallery: [
-			galleryItem(gutsCutout, "Guts cutout", "Even outside the exact armor design, Guts' silhouette foreshadows this state."),
-			galleryItem(schierkeImage, "Schierke portrait", "Schierke's role is essential in helping Guts return from the edge."),
-			galleryItem(skullKnightImage, "Skull Knight portrait", "The armor's history echoes through Skull Knight's own past."),
-		],
+		gallery: makeArtifactGallery("berserker-armor", "Berserker Armor"),
 	},
 	{
 		name: "Falconia",
@@ -181,11 +192,43 @@ export const ARTIFACTS = [
 			"It is beautiful in a way that makes readers suspicious.",
 			"It turns utopia into one of Berserk's sharpest moral tensions.",
 		],
-		gallery: [
-			galleryItem(griffithCutout, "Griffith cutout", "Falconia is inseparable from Griffith's controlled radiance."),
-			galleryItem(charlotteImage, "Charlotte portrait", "The city also fulfills the pageantry of Midland's royal fantasy."),
-			galleryItem(zoddCutout, "Zodd cutout", "The monsters serving its order are part of what makes the peace uneasy."),
+		gallery: makeArtifactGallery("falconia", "Falconia"),
+	},
+	{
+		name: "God Hand",
+		type: "Entity / Concept",
+		description:
+			"The God Hand sit above the human scale of Berserk like a blasphemous court of causality. They are not just villains to defeat, but embodiments of the system that keeps turning despair into sacrifice.",
+		notes: [
+			"They frame destiny as a structure rather than a sequence of accidents.",
+			"They transform private suffering into cosmic ritual.",
+			"They make Berserk's horror philosophical as well as physical.",
 		],
+		gallery: makeArtifactGallery("godhand", "God Hand"),
+	},
+	{
+		name: "Sword of Actuation",
+		type: "Relic / Blade",
+		description:
+			"Skull Knight's blade is one of Berserk's cleanest images of metaphysical violence: a weapon that cuts through physical reality because it is already aimed at deeper layers of the world.",
+		notes: [
+			"It is tied to beherits and the manipulation of space.",
+			"It makes causality feel less abstract and more surgical.",
+			"It extends Skull Knight's role as an enemy of larger systems rather than single foes.",
+		],
+		gallery: makeArtifactGallery("sword-of-actuation", "Sword of Actuation"),
+	},
+	{
+		name: "Astral World",
+		type: "Concept / Realm",
+		description:
+			"The Astral World is where Berserk's monsters, gods, memories, and symbolic structures stop pretending to be separate from daily life. When it bleeds through, reality changes shape.",
+		notes: [
+			"It explains why myth and matter can collide so cleanly in the series.",
+			"It turns folklore into geography.",
+			"It widens Berserk from revenge drama into cosmic fantasy-horror.",
+		],
+		gallery: makeArtifactGallery("astral-world", "Astral World"),
 	},
 ];
 
@@ -193,56 +236,56 @@ export const COMMUNITY_ITEMS = [
 	{
 		title: "Panel Study Nights",
 		source: "Referenced from manga-reading communities and art study threads.",
-		image: skullKnightImage,
+		image: portraits.skullKnight,
 		description:
 			"Fans gather around Miura's dense pages to study hatching, silhouette, armor design, and how motion is carved into still panels.",
 	},
 	{
 		title: "Cosplay and Prop Builds",
 		source: "Referenced from convention showcases, maker forums, and video build logs.",
-		image: gutsImage,
+		image: portraits.guts,
 		description:
 			"The Dragonslayer, Berserker Armor, and Brand of Sacrifice remain favorite challenges for builders who like their craft heavy and dramatic.",
 	},
 	{
 		title: "Music for the Long Road",
 		source: "Referenced from fan playlists and ambient mixes inspired by the manga.",
-		image: brandImage,
+		image: uiBrand,
 		description:
 			"From Susumu Hirasawa-inspired mixes to rain-soaked reading playlists, the community has built a whole listening ritual around Berserk.",
 	},
 	{
 		title: "Theory Archives",
 		source: "Referenced from long-running forum discussions and subreddit theory posts.",
-		image: cascaImage,
+		image: portraits.casca,
 		description:
 			"Causality, the Moonlight Boy, Skull Knight's history, and Falconia's future keep readers returning to older chapters with fresh eyes.",
 	},
 	{
 		title: "Character Essays",
 		source: "Referenced from video essays, blog posts, and reread threads.",
-		image: judeauImage,
+		image: portraits.judeau,
 		description:
 			"Fans love writing about the emotional engineering of characters like Judeau, Farnese, Casca, and Griffith because Berserk rewards close rereading.",
 	},
 	{
 		title: "Tattoo and Symbol Design",
 		source: "Referenced from tattoo portfolios and fan art circles.",
-		image: brandImage,
+		image: uiBrand,
 		description:
 			"The Brand of Sacrifice and Hawk imagery have become some of the series' most enduring forms of personal homage.",
 	},
 	{
 		title: "Figure and Merchandise Hunting",
 		source: "Referenced from collector threads and hobby marketplaces.",
-		image: zoddImage,
+		image: portraits.zodd,
 		description:
 			"Collectors trade tips on Art of War statues, deluxe editions, older figures, soundtracks, and the weird corners of Berserk merch history.",
 	},
 	{
 		title: "Reread Clubs",
 		source: "Referenced from forum clubs, subreddits, and read-along threads.",
-		image: puckImage,
+		image: portraits.puck,
 		description:
 			"Some of the best Berserk discussion comes from slower rereads where readers track tone shifts, foreshadowing, and the changing shape of Guts' relationships.",
 	},
@@ -287,39 +330,40 @@ export const COMMUNITY_HUBS = [
 ];
 
 export const CHARACTER_GALLERIES = {
-	guts: [
-		galleryItem(gutsImage, "Guts portrait", "The war-torn face most readers carry around after the first volume."),
-		galleryItem(gutsCutout, "Guts cutout", "A cleaner figure shot for the archive page and quick visual recognition."),
-		galleryItem(pippinImage, "Pippin", "A reminder that Guts' story is also shaped by the Band of the Hawk."),
-		galleryItem(rickertImage, "Rickert", "The surviving witnesses matter as much as the fallen ones."),
-	],
-	griffith: [
-		galleryItem(griffithImage, "Griffith portrait", "Charm, ambition, and menace occupying the same frame."),
-		galleryItem(griffithCutout, "Griffith cutout", "An almost saint-like silhouette that the series constantly destabilizes."),
-		galleryItem(charlotteImage, "Charlotte", "Midland's royal dream is part of Griffith's image-making."),
-		galleryItem(corkusImage, "Corkus", "The Hawks also show Griffith through the people orbiting him."),
-	],
-	casca: [
-		galleryItem(cascaImage, "Casca portrait", "One of the strongest emotional anchors in the entire manga."),
-		galleryItem(cascaCutout, "Casca cutout", "A cleaner portrait treatment for the profile page."),
-		galleryItem(judeauImage, "Judeau", "Casca's relationships in the Hawks sharpen her story's tragedy."),
-		galleryItem(godotImage, "Godot", "The post-Eclipse caretaking world also shapes how we read Casca."),
-	],
-	zodd: [
-		galleryItem(zoddImage, "Zodd portrait", "The battlefield stops feeling human the moment Zodd arrives."),
-		galleryItem(zoddCutout, "Zodd cutout", "A blunt silhouette worthy of an apostle legend."),
-		galleryItem(skullKnightImage, "Skull Knight", "His rivalry with Skull Knight gives his violence history."),
-		galleryItem(horseImage, "War horse", "Even the setting around Zodd tends to feel feral and charging."),
-	],
-	"skull-knight": [
-		galleryItem(skullKnightImage, "Skull Knight portrait", "A walking omen with just enough history exposed to be dangerous."),
-		galleryItem(zoddImage, "Zodd portrait", "His longest conversations often happen through combat."),
-		galleryItem(gutsImage, "Guts portrait", "He appears whenever Guts' path brushes against larger patterns."),
-	],
-	farnese: [
-		galleryItem(farneseImage, "Farnese portrait", "A brittle public mask hiding terror, hunger, and change."),
-		galleryItem(serpicoImage, "Serpico portrait", "Her story is impossible to separate from Serpico's watchfulness."),
-		galleryItem(schierkeImage, "Schierke portrait", "Magic becomes part of her second life."),
-		galleryItem(cascaImage, "Casca portrait", "Caregiving and restoration redefine Farnese's role."),
-	],
+	guts: makeCharacterGallery("guts", "Guts"),
+	griffith: makeCharacterGallery("griffith", "Griffith"),
+	casca: makeCharacterGallery("casca", "Casca"),
+	zodd: makeCharacterGallery("zodd", "Zodd"),
+	"skull-knight": makeCharacterGallery("skullknight", "Skull Knight"),
+	farnese: makeCharacterGallery("farnese", "Farnese"),
+	charlotte: makeCharacterGallery("charlotte", "Charlotte"),
+	schierke: makeCharacterGallery("schierke", "Schierke"),
+	serpico: makeCharacterGallery("serpico", "Serpico"),
+	judeau: makeCharacterGallery("judeau", "Judeau"),
+	pippin: makeCharacterGallery("pippin", "Pippin"),
+	puck: makeCharacterGallery("puck", "Puck"),
+	rickert: makeCharacterGallery("rickert", "Rickert"),
+	corkus: makeCharacterGallery("corkus", "Corkus"),
+	godot: makeCharacterGallery("godot", "Godot"),
+	vargas: makeCharacterGallery("vargas", "Vargas"),
+};
+
+export const CHARACTER_MEDIA = {
+	guts: { image: portraits.guts, cutout: cutouts.guts },
+	griffith: { image: portraits.griffith, cutout: cutouts.griffith },
+	casca: { image: portraits.casca, cutout: cutouts.casca },
+	zodd: { image: portraits.zodd, cutout: cutouts.zodd },
+	"skull-knight": { image: portraits.skullKnight, cutout: cutouts.skullKnight },
+	farnese: { image: portraits.farnese, cutout: cutouts.farnese },
+	charlotte: { image: portraits.charlotte, cutout: cutouts.charlotte },
+	schierke: { image: portraits.schierke, cutout: cutouts.schierke },
+	serpico: { image: portraits.serpico, cutout: cutouts.serpico },
+	judeau: { image: portraits.judeau, cutout: cutouts.judeau },
+	pippin: { image: portraits.pippin, cutout: cutouts.pippin },
+	puck: { image: portraits.puck, cutout: cutouts.puck },
+	rickert: { image: portraits.rickert, cutout: cutouts.rickert },
+	corkus: { image: portraits.corkus, cutout: cutouts.corkus },
+	godot: { image: portraits.godot, cutout: cutouts.godot },
+	horse: { image: portraits.horse, cutout: null },
+	vargas: { image: portraits.vargas, cutout: cutouts.vargas },
 };

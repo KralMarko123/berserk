@@ -2,8 +2,10 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { VARIANTS } from "../../constants/AnimationVariants";
-import logo from "../../assets/images/brand.png";
+import { getImageAsset } from "../../constants/media";
 import "../../styles/components/Header.css";
+
+const logo = getImageAsset("brand.png");
 
 const Header = ({ shouldAnimate }) => {
 	let navigate = useNavigate();
