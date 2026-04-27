@@ -31,12 +31,20 @@ const Details = () => {
 		);
 	}
 
-	const { name, cutout, image, intro, traits, epithet, arc, gallery, videos } = character;
+	const { name, category, cutout, image, intro, plotConnection, traits, epithet, arc, gallery, videos } =
+		character;
 	const galleryItems = (gallery || []).map((galleryItem, index) => ({
 		src: galleryItem.src || galleryItem,
 		alt: galleryItem.alt || `${name} gallery ${index + 1}`,
 		caption: galleryItem.caption,
 	}));
+	const plotRoleCopy =
+		plotConnection && plotConnection.length
+			? plotConnection
+			: [
+					`${name} matters to Berserk less as background decoration and more as part of the emotional machinery around the people at the center.`,
+					`Even when the role is brief, the character helps shape the tone, pressure, or aftermath of the arcs they appear in.`,
+			  ];
 
 	return (
 		<>
@@ -72,6 +80,20 @@ const Details = () => {
 								{name}
 							</motion.h1>
 							<p className="details__arc">{arc}</p>
+							<div className="details__meta" aria-label={`${name} at a glance`}>
+								<div className="details__meta-item">
+									<span>Category</span>
+									<strong>{category}</strong>
+								</div>
+								<div className="details__meta-item">
+									<span>Traits</span>
+									<strong>{traits.length}</strong>
+								</div>
+								<div className="details__meta-item">
+									<span>Gallery</span>
+									<strong>{galleryItems.length ? `${galleryItems.length} images` : "Not yet archived"}</strong>
+								</div>
+							</div>
 							{intro?.map((paragraph, i) => (
 								<motion.p
 									key={i}
@@ -84,14 +106,24 @@ const Details = () => {
 							))}
 						</div>
 					</section>
-					<section className="details__personality">
-						<h2 className="section-title">Personality</h2>
-						<div className="traits__list">
-							{traits.map((trait) => (
-								<span key={trait} className="trait">
-									{trait}
-								</span>
-							))}
+					<section className="details__context">
+						<div className="details__personality">
+							<h2 className="section-title">Personality</h2>
+							<div className="traits__list">
+								{traits.map((trait) => (
+									<span key={trait} className="trait">
+										{trait}
+									</span>
+								))}
+							</div>
+						</div>
+						<div className="details__plot-role">
+							<h2 className="section-title">Connection To The Plot</h2>
+							<div className="details__plot-copy">
+								{plotRoleCopy.map((paragraph, index) => (
+									<p key={`${name}-plot-${index}`}>{paragraph}</p>
+								))}
+							</div>
 						</div>
 					</section>
 					<section className="details__gallery">

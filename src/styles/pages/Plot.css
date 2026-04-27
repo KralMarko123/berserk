@@ -65,9 +65,22 @@
 }
 
 @media (max-width: 760px) {
+	.plot .container {
+		gap: 1.35rem;
+	}
+
+	.plot__timeline {
+		gap: 0.9rem;
+	}
+
 	.plot__beat,
 	.plot__beat:nth-child(even) {
 		grid-template-columns: 1fr;
+		min-height: 0;
+		background: var(--surface-color);
+		border: 1px solid var(--line-color);
+		border-radius: 8px;
+		overflow: hidden;
 	}
 
 	.plot__beat:nth-child(even) .plot__image-wrap {
@@ -77,6 +90,42 @@
 	.plot__image-wrap,
 	.plot__beat:nth-child(even) .plot__image-wrap {
 		clip-path: none;
-		min-height: 240px;
+		min-height: 200px;
+		border-bottom: 1px solid var(--line-color);
+	}
+
+	.plot__beat-copy {
+		padding: 0.92rem 0.9rem 1rem;
+		gap: 0.5rem;
+	}
+
+	.plot__beat-copy span {
+		font-size: 0.72rem;
+		letter-spacing: 0.04em;
+	}
+
+	.plot__beat-copy h2 {
+		font-size: clamp(1.35rem, 7vw, 1.85rem);
+		line-height: 0.96;
+	}
+
+	.plot__beat-copy p {
+		font-size: 0.92rem;
+		line-height: 1.55;
+	}
+}
+
+@media (max-width: 420px) {
+	.plot__image-wrap,
+	.plot__beat:nth-child(even) .plot__image-wrap {
+		min-height: 180px;
+	}
+
+	.plot__beat-copy {
+		padding: 0.82rem 0.78rem 0.95rem;
+	}
+
+	.plot__beat-copy h2 {
+		font-size: 1.2rem;
 	}
 }

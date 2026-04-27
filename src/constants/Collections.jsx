@@ -78,42 +78,42 @@ export const PLOT_BEATS = [
 		kicker: "A man too angry to die",
 		image: portraits.guts,
 		text:
-			"Guts wanders through a hostile world with the Brand of Sacrifice pulling the dead toward him. The early story frames him as a terrifying myth before slowly revealing the wound beneath the armor.",
+			"Guts moves through a world that barely lets him sleep, let alone heal. At first he reads like a monster story told from the wrong side, until the armor starts to crack and the grief underneath shows through.",
 	},
 	{
 		title: "Golden Age",
 		kicker: "Brotherhood, ambition, and the dream",
 		image: portraits.griffith,
 		text:
-			"The Band of the Hawk gives Guts a place to belong, while Griffith's impossible dream lifts common mercenaries into history. The warmth of that bond is what makes its collapse unbearable.",
+			"The Band of the Hawk gives Guts a place to belong, and for a while that feeling is almost enough to make the world seem survivable. That warmth is exactly what makes the collapse hurt so much.",
 	},
 	{
 		title: "The Eclipse",
 		kicker: "Causality closes its hand",
 		image: portraits.casca,
 		text:
-			"The sacrifice of the Hawks turns friendship into a cosmic wound. Guts and Casca survive, but survival in Berserk is never clean; it becomes a sentence, a duty, and a reason to keep moving.",
+			"The Eclipse turns love, loyalty, and ambition into one enormous wound. Guts and Casca live through it, but Berserk never treats survival as a happy ending. It becomes a burden, a duty, and a reason to keep walking.",
 	},
 	{
 		title: "Conviction",
 		kicker: "Faith under a poisoned sky",
 		image: portraits.farnese,
 		text:
-			"Religious terror, refugees, apostles, and the Holy See collide at St. Albion. The arc turns moral certainty into something unstable and introduces companions who will change Guts' path.",
+			"Religious terror, refugees, apostles, and the Holy See all pile into the same cursed space. Conviction is where Berserk starts asking what belief looks like when fear is doing most of the talking.",
 	},
 	{
 		title: "Millennium Falcon",
 		kicker: "The world cracks open",
 		image: portraits.zodd,
 		text:
-			"Griffith returns to the physical world and builds toward Falconia while Guts gathers a fragile party around Casca. Monsters stop being hidden rumors and become the new weather of the world.",
+			"Griffith returns in a body the world can kneel to, while Guts slowly gathers people he cannot afford to lose. By this point the monstrous is no longer hidden. It is just the weather everyone has to live under.",
 	},
 	{
 		title: "Fantasia",
 		kicker: "Healing is not the ending",
 		image: portraits.schierke,
 		text:
-			"Magic, memory, and impossible distance reshape the quest. Berserk lets tenderness exist beside horror, then asks whether restoration can survive the next turn of fate.",
+			"Magic, memory, and distance start to matter as much as brute force. Fantasia lets Berserk become strangely tender for stretches, then reminds you how fragile that tenderness still is.",
 	},
 ];
 
@@ -122,37 +122,37 @@ export const RESOURCES = [
 		title: "Official Dark Horse Manga",
 		type: "Publisher",
 		url: "https://www.darkhorse.com/Search/Berserk",
-		description: "English volumes, deluxe editions, and official release information.",
+		description: "The practical place to check editions, releases, and what is officially in print.",
 	},
 	{
 		title: "SkullKnight.net Encyclopedia",
 		type: "Reference",
 		url: "https://www.skullknight.net/encyclopedia/",
-		description: "One of the longest-running Berserk reference hubs, plus podcasts and episode guides.",
+		description: "Old-school Berserk internet in the best sense: reference material, podcasts, and years of discussion.",
 	},
 	{
 		title: "Berserk Wiki",
 		type: "Reference",
 		url: "https://berserk.fandom.com/wiki/Berserk_Wiki",
-		description: "A broad fan-maintained index for characters, arcs, locations, and terminology.",
+		description: "Useful when you need to check a name, arc, location, or weird bit of terminology quickly.",
 	},
 	{
 		title: "Character Lore Videos",
 		type: "Video Search",
 		url: "https://www.youtube.com/results?search_query=Berserk+character+lore",
-		description: "A starting shelf for long-form character explanations and arc breakdowns.",
+		description: "A decent first stop when you want someone to talk through a character or arc out loud.",
 	},
 	{
 		title: "Berserk Analysis Essays",
 		type: "Video Search",
 		url: "https://www.youtube.com/results?search_query=Berserk+analysis+Kentaro+Miura",
-		description: "Theme, paneling, symbolism, and storytelling commentary from the wider fandom.",
+		description: "Good for themes, symbolism, page construction, and the kind of long-form reading Berserk invites.",
 	},
 	{
 		title: "Studio Gaga and Continuation News",
 		type: "Search",
 		url: "https://www.google.com/search?q=Berserk+Studio+Gaga+news",
-		description: "A practical way to check current continuation coverage without locking the site to one outlet.",
+		description: "A simple way to keep up with current continuation coverage without pretending one source owns the whole story.",
 	},
 ];
 
@@ -161,7 +161,7 @@ export const ARTIFACTS = [
 		name: "Brand of Sacrifice",
 		type: "Mark",
 		description:
-			"The Brand turns the body into a signal fire for restless spirits and apostles. In Berserk it is both a metaphysical wound and a visual thesis: survival always has a cost.",
+			"The Brand turns a body into a beacon for the dead and the monstrous. It is a wound, a sentence, and one of the clearest ways Berserk says survival never comes free.",
 		notes: [
 			"It marks someone chosen as an offering in a sacrifice.",
 			"It bleeds or aches when evil forces draw near.",
@@ -173,7 +173,7 @@ export const ARTIFACTS = [
 		name: "Dragonslayer",
 		type: "Weapon",
 		description:
-			"At first glance it is absurdly large, almost a joke about impossible swords. Then Miura makes it believable by giving it weight, exhaustion, and consequence every time Guts swings it.",
+			"At first the Dragonslayer looks absurd. Then the story gives it weight, drag, and exhaustion until it feels less like a fantasy weapon and more like a life someone should not have had to build around.",
 		notes: [
 			"It is less a sword than a slab of iron given purpose.",
 			"It becomes spiritually tainted through apostle blood and constant battle.",
@@ -185,7 +185,7 @@ export const ARTIFACTS = [
 		name: "Behelit",
 		type: "Relic",
 		description:
-			"The Behelit is a grotesque key disguised as an object. It looks accidental and organic, but it opens directly into one of Berserk's most horrifying ideas: ambition presented with a price.",
+			"The Behelit looks almost stupid until it starts mattering, and then it becomes one of the ugliest ideas in the series: a door that only opens when someone is desperate enough to become worse than themselves.",
 		notes: [
 			"It awakens at a moment of total despair.",
 			"It serves as a bridge between human collapse and apostle transformation.",
@@ -197,7 +197,7 @@ export const ARTIFACTS = [
 		name: "Berserker Armor",
 		type: "Armor",
 		description:
-			"The armor gives Guts what he thinks he needs by silencing pain and sharpening violence. It is one of Berserk's clearest examples of power arriving as a bargain with the self.",
+			"The armor gives Guts exactly the kind of help he should never trust. It answers pain with numbness and desperation with more force, which is why it feels powerful and frightening at the same time.",
 		notes: [
 			"It pushes the wearer beyond normal physical limits.",
 			"It also strips away restraint, memory, and bodily safety.",
@@ -209,7 +209,7 @@ export const ARTIFACTS = [
 		name: "Falconia",
 		type: "Concept / City",
 		description:
-			"Falconia is not just a city. It is Griffith's dream given clean walls, safe streets, and the terrible question of whether salvation is still salvation when it comes from him.",
+			"Falconia is Griffith's dream cleaned up into architecture. It is beautiful, protective, and impossible to look at innocently once you know what paid for it.",
 		notes: [
 			"It gathers humanity under a single miraculous shelter.",
 			"It is beautiful in a way that makes readers suspicious.",
@@ -221,7 +221,7 @@ export const ARTIFACTS = [
 		name: "God Hand",
 		type: "Entity / Concept",
 		description:
-			"The God Hand sit above the human scale of Berserk like a blasphemous court of causality. They are not just villains to defeat, but embodiments of the system that keeps turning despair into sacrifice.",
+			"The God Hand feel less like bosses waiting at the top of a tower and more like the shape of the world's cruelty made visible. They are what despair looks like once it has a theology.",
 		notes: [
 			"They frame destiny as a structure rather than a sequence of accidents.",
 			"They transform private suffering into cosmic ritual.",
@@ -233,7 +233,7 @@ export const ARTIFACTS = [
 		name: "Sword of Actuation",
 		type: "Relic / Blade",
 		description:
-			"Skull Knight's blade is one of Berserk's cleanest images of metaphysical violence: a weapon that cuts through physical reality because it is already aimed at deeper layers of the world.",
+			"Skull Knight's blade is one of those Berserk ideas that sounds impossible until the page makes it feel obvious. It is violence aimed past the surface of reality and into the structure underneath.",
 		notes: [
 			"It is tied to beherits and the manipulation of space.",
 			"It makes causality feel less abstract and more surgical.",
@@ -245,7 +245,7 @@ export const ARTIFACTS = [
 		name: "Astral World",
 		type: "Concept / Realm",
 		description:
-			"The Astral World is where Berserk's monsters, gods, memories, and symbolic structures stop pretending to be separate from daily life. When it bleeds through, reality changes shape.",
+			"The Astral World is where Berserk stops separating the symbolic from the literal. Memory, myth, fear, and creaturely reality all start occupying the same ground.",
 		notes: [
 			"It explains why myth and matter can collide so cleanly in the series.",
 			"It turns folklore into geography.",
@@ -261,56 +261,56 @@ export const COMMUNITY_ITEMS = [
 		source: "Referenced from manga-reading communities and art study threads.",
 		image: portraits.skullKnight,
 		description:
-			"Fans gather around Miura's dense pages to study hatching, silhouette, armor design, and how motion is carved into still panels.",
+			"People keep returning to Miura's pages the way art students return to a difficult painting: to slow down, stare hard, and figure out how the line work is doing so much.",
 	},
 	{
 		title: "Cosplay and Prop Builds",
 		source: "Referenced from convention showcases, maker forums, and video build logs.",
 		image: portraits.guts,
 		description:
-			"The Dragonslayer, Berserker Armor, and Brand of Sacrifice remain favorite challenges for builders who like their craft heavy and dramatic.",
+			"The Dragonslayer, the armor, and the Brand keep pulling in builders who like their projects oversized, difficult, and a little ridiculous in the best way.",
 	},
 	{
 		title: "Music for the Long Road",
 		source: "Referenced from fan playlists and ambient mixes inspired by the manga.",
 		image: uiBrand,
 		description:
-			"From Susumu Hirasawa-inspired mixes to rain-soaked reading playlists, the community has built a whole listening ritual around Berserk.",
+			"From Hirasawa-adjacent mixes to rainy reading playlists, people have built a whole atmosphere around how Berserk should sound in your room.",
 	},
 	{
 		title: "Theory Archives",
 		source: "Referenced from long-running forum discussions and subreddit theory posts.",
 		image: portraits.casca,
 		description:
-			"Causality, the Moonlight Boy, Skull Knight's history, and Falconia's future keep readers returning to older chapters with fresh eyes.",
+			"Causality, Moonlight Boy, Skull Knight's past, Falconia's future: this fandom loves a theory that sends you back three arcs to check a face in the background.",
 	},
 	{
 		title: "Character Essays",
 		source: "Referenced from video essays, blog posts, and reread threads.",
 		image: portraits.judeau,
 		description:
-			"Fans love writing about the emotional engineering of characters like Judeau, Farnese, Casca, and Griffith because Berserk rewards close rereading.",
+			"People love writing about how Miura builds emotion, especially around characters like Casca, Judeau, Farnese, and Griffith, because rereading always reveals another seam.",
 	},
 	{
 		title: "Tattoo and Symbol Design",
 		source: "Referenced from tattoo portfolios and fan art circles.",
 		image: uiBrand,
 		description:
-			"The Brand of Sacrifice and Hawk imagery have become some of the series' most enduring forms of personal homage.",
+			"The Brand and Hawk imagery have become some of the most common ways fans carry Berserk into real life, whether that means tattoos, prints, or handmade things.",
 	},
 	{
 		title: "Figure and Merchandise Hunting",
 		source: "Referenced from collector threads and hobby marketplaces.",
 		image: portraits.zodd,
 		description:
-			"Collectors trade tips on Art of War statues, deluxe editions, older figures, soundtracks, and the weird corners of Berserk merch history.",
+			"Collectors swap notes on statues, deluxe volumes, older figures, soundtracks, and all the oddly specific side roads of Berserk merchandise.",
 	},
 	{
 		title: "Reread Clubs",
 		source: "Referenced from forum clubs, subreddits, and read-along threads.",
 		image: portraits.puck,
 		description:
-			"Some of the best Berserk discussion comes from slower rereads where readers track tone shifts, foreshadowing, and the changing shape of Guts' relationships.",
+			"Some of the best discussion comes from rereads where people stop rushing and start noticing tone shifts, planted images, and how Guts changes around other people.",
 	},
 ];
 
@@ -320,35 +320,35 @@ export const COMMUNITY_HUBS = [
 		type: "Forum",
 		url: "https://www.skullknight.net/forum/index.php",
 		description:
-			"Long-running Berserk forum with dedicated sections for continuation discussion, theories, merchandise, fan creations, and podcasts.",
+			"A long-running forum where Berserk discussion can still breathe a little instead of being swallowed by one endless feed.",
 	},
 	{
 		name: "r/Berserk",
 		type: "Reddit",
 		url: "https://www.reddit.com/r/Berserk/",
 		description:
-			"The biggest public social feed for memes, chapter reactions, tattoos, shelf posts, questions, and fan art.",
+			"The biggest public stream for memes, chapter reactions, shelf photos, tattoos, questions, and the usual chaos of a giant fandom.",
 	},
 	{
 		name: "MyAnimeList Berserk Club & Boards",
 		type: "Forum",
 		url: "https://myanimelist.net/manga/2/Berserk",
 		description:
-			"A general anime/manga home base where new readers often start discussion, reviews, and recommendation threads.",
+			"A broad anime and manga home base where newer readers often start with reviews, recommendations, and first impressions.",
 	},
 	{
 		name: "DISBOARD Berserk Tag",
 		type: "Discord Directory",
 		url: "https://disboard.org/servers/tag/berserk",
 		description:
-			"A living directory of currently active Berserk-tagged Discord servers, useful because specific invites age fast.",
+			"A useful directory because specific server invites go stale constantly.",
 	},
 	{
 		name: "Discord Directory: Berserk",
 		type: "Discord Directory",
 		url: "https://discord.directory/servers/berserk",
 		description:
-			"Another directory-style jumping-off point if you want chat communities rather than forum threads.",
+			"Another decent starting point if you want live chat instead of forum-style discussion.",
 	},
 ];
 

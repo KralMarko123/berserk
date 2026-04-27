@@ -105,7 +105,76 @@
 }
 
 @media (max-width: 760px) {
+	.character {
+		min-height: 0;
+		aspect-ratio: 0.9 / 1.16;
+	}
+
+	.character__overlay {
+		padding: 0.75rem;
+	}
+
 	.character__text {
-		grid-template-rows: 2.2rem minmax(4.3rem, auto) minmax(0, auto);
+		grid-template-rows: 1.7rem minmax(3.2rem, auto) minmax(0, auto);
+		gap: 0.22rem;
+	}
+
+	.character__name {
+		font-size: clamp(1.2rem, 5vw, 1.85rem);
+		line-height: 0.98;
+	}
+
+	.character__name--compact {
+		font-size: clamp(1.05rem, 4.4vw, 1.55rem);
+	}
+
+	.character__name--long {
+		font-size: clamp(0.95rem, 4vw, 1.3rem);
+	}
+
+	.character__epithet {
+		font-size: 0.66rem;
+		line-height: 1.1;
+	}
+
+	.character__arc {
+		font-size: 0.76rem;
+		line-height: 1.28;
+		max-width: 24ch;
+	}
+}
+
+@media (max-width: 420px) {
+	.character {
+		aspect-ratio: 0.88 / 1.15;
+	}
+
+	.character__overlay {
+		padding: 0.68rem;
+	}
+
+	.character__text {
+		grid-template-rows: 1.5rem minmax(2.8rem, auto) minmax(0, auto);
+	}
+
+	.character__name {
+		font-size: clamp(1.05rem, 4.8vw, 1.45rem);
+	}
+
+	.character__name--compact {
+		font-size: clamp(0.98rem, 4.2vw, 1.28rem);
+	}
+
+	.character__name--long {
+		font-size: clamp(0.88rem, 3.7vw, 1.1rem);
+	}
+
+	.character__epithet {
+		font-size: 0.62rem;
+	}
+
+	.character__arc {
+		font-size: 0.7rem;
+		line-height: 1.24;
 	}
 }

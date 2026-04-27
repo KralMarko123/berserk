@@ -15,9 +15,9 @@ const Artifacts = () => {
 						<p className="page-kicker">Marks, relics, omens</p>
 						<h1>Artifacts</h1>
 						<p>
-							Berserk's world is carried by objects and concepts that feel heavier than props:
-							they wound, tempt, protect, and rewrite destiny. This page treats them like a field
-							guide rather than a glossary.
+							In Berserk, objects are rarely just objects. A mark can become a sentence. A sword can
+							start to feel like a worldview. This page is less about definitions and more about
+							why these things stay lodged in the story.
 						</p>
 					</section>
 					<section className="artifacts__list">

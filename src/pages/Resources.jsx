@@ -14,8 +14,9 @@ const Resources = () => {
 						<p className="page-kicker">Reading shelf</p>
 						<h1>Resources</h1>
 						<p>
-							A compact shelf for official releases, reference hubs, and searches that lead into
-							long-form lore, analysis, and current Berserk material.
+							A small reading shelf for when you want to go one layer deeper: official editions,
+							reference hubs, and decent places to start if you are hunting for essays, videos, or
+							current Berserk news.
 						</p>
 					</section>
 					<section className="resources__grid">

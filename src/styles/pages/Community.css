@@ -89,11 +89,81 @@
 }
 
 @media (max-width: 560px) {
+	.community .container {
+		gap: 1.35rem;
+	}
+
+	.community__grid {
+		gap: 0.8rem;
+	}
+
 	.community-card {
 		grid-template-columns: 1fr;
+		min-height: 0;
+		border-radius: 8px;
 	}
 
 	.community-card img {
-		height: 220px;
+		height: 180px;
+	}
+
+	.community-card div {
+		padding: 0.85rem 0.85rem 0.95rem;
+		gap: 0.5rem;
+	}
+
+	.community-card span,
+	.community-hub span {
+		font-size: 0.76rem;
+		line-height: 1.35;
+		letter-spacing: 0.04em;
+	}
+
+	.community-card h2,
+	.community__hubs h2,
+	.community-hub h3 {
+		font-size: 1.28rem;
+		line-height: 0.98;
+	}
+
+	.community-card p,
+	.community__hubs-copy p,
+	.community-hub p {
+		font-size: 0.91rem;
+		line-height: 1.52;
+	}
+
+	.community__hubs {
+		gap: 0.8rem;
+		padding-top: 0.8rem;
+	}
+
+	.community__hub-grid {
+		gap: 0.75rem;
+	}
+
+	.community-hub {
+		padding: 0.85rem 0.85rem 0.92rem;
+		border-radius: 8px;
+		background:
+			linear-gradient(155deg, rgba(185, 31, 31, 0.12), transparent 48%),
+			var(--surface-color);
+	}
+}
+
+@media (max-width: 420px) {
+	.community-card img {
+		height: 160px;
+	}
+
+	.community-card div,
+	.community-hub {
+		padding-inline: 0.78rem;
+	}
+
+	.community-card h2,
+	.community__hubs h2,
+	.community-hub h3 {
+		font-size: 1.14rem;
 	}
 }

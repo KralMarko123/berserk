@@ -14,8 +14,9 @@ const Community = () => {
 						<p className="page-kicker">Around the campfire</p>
 						<h1>Community</h1>
 						<p>
-							Berserk fandom has always had a handmade quality: essays, props, theories, music,
-							panel studies, and small rituals that make the manga feel shared.
+							Berserk fandom has always felt a little handmade. People do not just post reactions;
+							they build swords, annotate panels, trade theories, make playlists, and keep finding
+							new ways to sit with the same wounds together.
 						</p>
 					</section>
 					<section className="community__grid">
@@ -35,9 +36,9 @@ const Community = () => {
 							<p className="page-kicker">Forums, chats, threads</p>
 							<h2>Places to keep reading with other people</h2>
 							<p>
-								Some readers want long-form theory threads, some want fast-moving chat, and some
-								just want a good place to ask where to start. These are the most useful entry
-								points to put on the site.
+								Some people want long theory threads. Some want a fast-moving server. Some just
+								want somewhere decent to ask a question without being buried. These are the doors
+								most worth leaving open here.
 							</p>
 						</div>
 						<div className="community__hub-grid">

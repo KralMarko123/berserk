@@ -15,9 +15,9 @@ const Plot = () => {
 						<p className="page-kicker">A path through causality</p>
 						<h1>Plot</h1>
 						<p>
-							Berserk is best felt as a sequence of emotional ruins: each arc leaves behind a
-							different kind of shelter, scar, and question. This path uses the existing archive
-							images as manga-like panels rather than a plain wall of text.
+							Berserk is easier to feel than to summarize. Every arc leaves behind a different kind
+							of wreckage, and the story keeps asking what can still be carried forward after that.
+							This page leans into that rhythm instead of flattening everything into one recap.
 						</p>
 					</section>
 					<section className="plot__timeline">

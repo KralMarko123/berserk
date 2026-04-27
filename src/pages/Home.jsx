@@ -26,8 +26,9 @@ const Home = () => {
 							<p className="home__eyebrow">A quiet archive for strugglers</p>
 							<h1>Berserk</h1>
 							<p>
-								A cozy, ash-dark tribute to Kentaro Miura's world: characters, arcs, lore
-								materials, and the community rituals that keep the story alive between reads.
+								A place to linger with Miura's world for a while: the people, the damage they
+								carry, the symbols that keep returning, and the fan rituals that grow around a
+								story this heavy.
 							</p>
 							<div className="home__actions">
 								<Link className="button button--primary" to="/characters">
@@ -51,27 +52,27 @@ const Home = () => {
 						<Link to="/characters" className="home__entry">
 							<span>01</span>
 							<strong>Characters</strong>
-							<p>Portraits, traits, galleries, and lore trails.</p>
+							<p>Profiles, image sets, and the frayed lines that tie people to the larger tragedy.</p>
 						</Link>
 						<Link to="/plot" className="home__entry">
 							<span>02</span>
 							<strong>Plot</strong>
-							<p>A visual arc path through the manga's major movements.</p>
+							<p>A visual walk through the arcs, from battlefield ambition to something almost mythic.</p>
 						</Link>
 						<Link to="/resources" className="home__entry">
 							<span>03</span>
 							<strong>Resources</strong>
-							<p>Official links, reference hubs, and video searches.</p>
+							<p>Places to read more, watch more, and keep following the work without drifting into junk.</p>
 						</Link>
 						<Link to="/artifacts" className="home__entry">
 							<span>04</span>
 							<strong>Artifacts</strong>
-							<p>Marks, relics, armor, blades, and concepts that shape fate.</p>
+							<p>Marks, weapons, relics, and ideas that keep pressing the story toward fate and ruin.</p>
 						</Link>
 						<Link to="/community" className="home__entry">
 							<span>05</span>
 							<strong>Community</strong>
-							<p>Fan practices, references, builds, theories, and study rituals.</p>
+							<p>The essays, builds, playlists, rereads, and forums where Berserk keeps being shared.</p>
 						</Link>
 					</section>
 				</div>
