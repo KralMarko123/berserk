@@ -89,6 +89,11 @@ const Header = ({ shouldAnimate }) => {
 						</NavLink>
 					</li>
 					<li>
+						<NavLink className="nav__list__item" to="/adaptations">
+							Adaptations
+						</NavLink>
+					</li>
+					<li>
 						<NavLink className="nav__list__item" to="/artifacts">
 							Artifacts
 						</NavLink>

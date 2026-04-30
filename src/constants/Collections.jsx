@@ -5,69 +5,69 @@ const uiBrand = getImageAsset("brand.png");
 const image = (path) => getImageAsset(path);
 
 const portraits = {
-	guts: image("guts/guts.jpg"),
-	griffith: image("griffith/griffith.jpg"),
-	casca: image("casca/casca.jpg"),
-	conrad: image("conrad/conrad.webp"),
-	zodd: image("zodd/zodd.jpg"),
-	femto: image("femto/femto.webp"),
-	flora: image("flora/flora.jpg"),
-	ganishka: image("ganishka/ganishka.jpg"),
-	skullKnight: image("skullknight/skullknight.jpg"),
-	isidro: image("isidro/isidro.jpg"),
-	isma: image("isma/isma.webp"),
-	moonlightBoy: image("moonlightboy/moonlightboy.webp"),
-	mozgus: image("mozgus/mozgus.jpg"),
-	roderick: image("roderick/roderick.jpg"),
-	schierke: image("schierke/schierke.jpg"),
-	farnese: image("farnese/farnese.jpg"),
-	serpico: image("serpico/serpico.jpg"),
-	slan: image("slan/slan.jpg"),
-	judeau: image("judeau/judeau.jpg"),
-	charlotte: image("charlotte/charlotte.jpg"),
-	puck: image("puck/puck.jpg"),
-	rickert: image("rickert/rickert.jpg"),
-	pippin: image("pippin/pippin.jpg"),
-	corkus: image("corkus/corkus.jpg"),
-	godot: image("godot/godot.jpg"),
-	horse: image("horse/horse.jpg"),
-	ubik: image("ubik/ubik.webp"),
-	vargas: image("vargas/vargas.jpg"),
-	void: image("void/void.webp"),
+	guts: image("characters/guts/guts.jpg"),
+	griffith: image("characters/griffith/griffith.jpg"),
+	casca: image("characters/casca/casca.jpg"),
+	conrad: image("characters/conrad/conrad.webp"),
+	zodd: image("characters/zodd/zodd.jpg"),
+	femto: image("characters/femto/femto.webp"),
+	flora: image("characters/flora/flora.jpg"),
+	ganishka: image("characters/ganishka/ganishka.jpg"),
+	skullKnight: image("characters/skullknight/skullknight.jpg"),
+	isidro: image("characters/isidro/isidro.jpg"),
+	isma: image("characters/isma/isma.webp"),
+	moonlightBoy: image("characters/moonlightboy/moonlightboy.webp"),
+	mozgus: image("characters/mozgus/mozgus.jpg"),
+	roderick: image("characters/roderick/roderick.jpg"),
+	schierke: image("characters/schierke/schierke.jpg"),
+	farnese: image("characters/farnese/farnese.jpg"),
+	serpico: image("characters/serpico/serpico.jpg"),
+	slan: image("characters/slan/slan.jpg"),
+	judeau: image("characters/judeau/judeau.jpg"),
+	charlotte: image("characters/charlotte/charlotte.jpg"),
+	puck: image("characters/puck/puck.jpg"),
+	rickert: image("characters/rickert/rickert.jpg"),
+	pippin: image("characters/pippin/pippin.jpg"),
+	corkus: image("characters/corkus/corkus.jpg"),
+	godot: image("characters/godot/godot.jpg"),
+	horse: image("characters/horse/horse.jpg"),
+	ubik: image("characters/ubik/ubik.webp"),
+	vargas: image("characters/vargas/vargas.jpg"),
+	void: image("characters/void/void.webp"),
 };
 
 const cutouts = {
-	guts: image("guts/guts_cutout.png"),
-	griffith: image("griffith/griffith_cutout.png"),
-	casca: image("casca/casca_cutout.png"),
-	conrad: image("conrad/conrad_cutout.webp"),
-	zodd: image("zodd/zodd_cutout.png"),
-	femto: image("femto/femto_cutout.png"),
-	skullKnight: image("skullknight/skullknight_cutout.png"),
-	ganishka: image("ganishka/ganishka_cutout.png"),
-	isidro: image("isidro/isidro_cutout.png"),
-	isma: image("isma/isma_cutout.png"),
-	moonlightBoy: image("moonlightboy/moonlightboy_cutout.png"),
-	mozgus: image("mozgus/mozgus_cutout.png"),
-	roderick: image("roderick/roderick_cutout.png"),
-	schierke: image("schierke/schierke_cutout.png"),
-	farnese: image("farnese/farnese_cutout.png"),
-	serpico: image("serpico/serpico_cutout.png"),
-	slan: image("slan/slan_cutout.png"),
-	judeau: image("judeau/judeau_cutout.png"),
-	charlotte: image("charlotte/charlotte_cutout.png"),
-	puck: image("puck/puck_cutout.png"),
-	rickert: image("rickert/rickert_cutout.png"),
-	pippin: image("pippin/pippin_cutout.png"),
-	corkus: image("corkus/corkus_cutout.png"),
-	godot: image("godot/godot_cutout.png"),
-	ubik: image("ubik/ubik_cutout.png"),
-	vargas: image("vargas/vargas_cutout.webp"),
-	void: image("void/void_cutout.webp"),
+	guts: image("characters/guts/guts_cutout.png"),
+	griffith: image("characters/griffith/griffith_cutout.png"),
+	casca: image("characters/casca/casca_cutout.png"),
+	conrad: image("characters/conrad/conrad_cutout.webp"),
+	zodd: image("characters/zodd/zodd_cutout.png"),
+	femto: image("characters/femto/femto_cutout.png"),
+	skullKnight: image("characters/skullknight/skullknight_cutout.png"),
+	ganishka: image("characters/ganishka/ganishka_cutout.png"),
+	isidro: image("characters/isidro/isidro_cutout.png"),
+	isma: image("characters/isma/isma_cutout.png"),
+	moonlightBoy: image("characters/moonlightboy/moonlightboy_cutout.png"),
+	mozgus: image("characters/mozgus/mozgus_cutout.png"),
+	roderick: image("characters/roderick/roderick_cutout.png"),
+	schierke: image("characters/schierke/schierke_cutout.png"),
+	farnese: image("characters/farnese/farnese_cutout.png"),
+	serpico: image("characters/serpico/serpico_cutout.png"),
+	slan: image("characters/slan/slan_cutout.png"),
+	judeau: image("characters/judeau/judeau_cutout.png"),
+	charlotte: image("characters/charlotte/charlotte_cutout.png"),
+	puck: image("characters/puck/puck_cutout.png"),
+	rickert: image("characters/rickert/rickert_cutout.png"),
+	pippin: image("characters/pippin/pippin_cutout.png"),
+	corkus: image("characters/corkus/corkus_cutout.png"),
+	godot: image("characters/godot/godot_cutout.png"),
+	ubik: image("characters/ubik/ubik_cutout.png"),
+	vargas: image("characters/vargas/vargas_cutout.webp"),
+	void: image("characters/void/void_cutout.webp"),
 };
 
 const makeCharacterGallery = (folder, altPrefix) =>
-	createGalleryItems(`${folder}/gallery/`, `${altPrefix} gallery`, "Archive image");
+	createGalleryItems(`characters/${folder}/gallery/`, `${altPrefix} gallery`, "Archive image");
 
 const makeArtifactGallery = (folder, altPrefix) =>
 	createGalleryItems(`artifacts/${folder}/`, `${altPrefix} artifact`, "Artifact archive");
@@ -76,42 +76,42 @@ export const PLOT_BEATS = [
 	{
 		title: "The Black Swordsman",
 		kicker: "A man too angry to die",
-		image: portraits.guts,
+		image: image("plot/blackswordsman.jpg"),
 		text:
 			"Guts moves through a world that barely lets him sleep, let alone heal. At first he reads like a monster story told from the wrong side, until the armor starts to crack and the grief underneath shows through.",
 	},
 	{
 		title: "Golden Age",
 		kicker: "Brotherhood, ambition, and the dream",
-		image: portraits.griffith,
+		image: image("plot/goldenage.webp"),
 		text:
 			"The Band of the Hawk gives Guts a place to belong, and for a while that feeling is almost enough to make the world seem survivable. That warmth is exactly what makes the collapse hurt so much.",
 	},
 	{
 		title: "The Eclipse",
 		kicker: "Causality closes its hand",
-		image: portraits.casca,
+		image: image("plot/eclipse.webp"),
 		text:
 			"The Eclipse turns love, loyalty, and ambition into one enormous wound. Guts and Casca live through it, but Berserk never treats survival as a happy ending. It becomes a burden, a duty, and a reason to keep walking.",
 	},
 	{
 		title: "Conviction",
 		kicker: "Faith under a poisoned sky",
-		image: portraits.farnese,
+		image: image("plot/conviction.webp"),
 		text:
 			"Religious terror, refugees, apostles, and the Holy See all pile into the same cursed space. Conviction is where Berserk starts asking what belief looks like when fear is doing most of the talking.",
 	},
 	{
 		title: "Millennium Falcon",
 		kicker: "The world cracks open",
-		image: portraits.zodd,
+		image: image("plot/mlleniumfalcon.webp"),
 		text:
 			"Griffith returns in a body the world can kneel to, while Guts slowly gathers people he cannot afford to lose. By this point the monstrous is no longer hidden. It is just the weather everyone has to live under.",
 	},
 	{
 		title: "Fantasia",
 		kicker: "Healing is not the ending",
-		image: portraits.schierke,
+		image: image("plot/fantasia.webp"),
 		text:
 			"Magic, memory, and distance start to matter as much as brute force. Fantasia lets Berserk become strangely tender for stretches, then reminds you how fragile that tenderness still is.",
 	},
@@ -122,37 +122,142 @@ export const RESOURCES = [
 		title: "Official Dark Horse Manga",
 		type: "Publisher",
 		url: "https://www.darkhorse.com/Search/Berserk",
+		image: image("resources/darkhorse.png"),
 		description: "The practical place to check editions, releases, and what is officially in print.",
 	},
 	{
 		title: "SkullKnight.net Encyclopedia",
 		type: "Reference",
 		url: "https://www.skullknight.net/encyclopedia/",
+		image: image("resources/skullknightnet.png"),
 		description: "Old-school Berserk internet in the best sense: reference material, podcasts, and years of discussion.",
 	},
 	{
 		title: "Berserk Wiki",
 		type: "Reference",
 		url: "https://berserk.fandom.com/wiki/Berserk_Wiki",
+		image: image("resources/berserkwiki.png"),
 		description: "Useful when you need to check a name, arc, location, or weird bit of terminology quickly.",
 	},
 	{
 		title: "Character Lore Videos",
 		type: "Video Search",
 		url: "https://www.youtube.com/results?search_query=Berserk+character+lore",
+		image: image("resources/characterlore.jpg"),
 		description: "A decent first stop when you want someone to talk through a character or arc out loud.",
 	},
 	{
 		title: "Berserk Analysis Essays",
 		type: "Video Search",
 		url: "https://www.youtube.com/results?search_query=Berserk+analysis+Kentaro+Miura",
+		image: image("resources/readingessay.jpg"),
 		description: "Good for themes, symbolism, page construction, and the kind of long-form reading Berserk invites.",
 	},
 	{
 		title: "Studio Gaga and Continuation News",
 		type: "Search",
 		url: "https://www.google.com/search?q=Berserk+Studio+Gaga+news",
+		image: image("resources/studiogaga.webp"),
 		description: "A simple way to keep up with current continuation coverage without pretending one source owns the whole story.",
+	},
+];
+
+export const ADAPTATION_SECTIONS = [
+	{
+		title: "Studio Animation",
+		kicker: "Official productions",
+		description:
+			"The official animated history of Berserk is uneven, but each version still tells you something about the period that made it and the part of the manga it chose to carry.",
+		items: [
+			{
+				title: "Berserk (1997)",
+				format: "TV Anime",
+				year: "1997-1998",
+				url: "https://en.wikipedia.org/wiki/Berserk_(1997_TV_series)",
+				description:
+					"For a lot of readers this is still the adaptation that lands best emotionally: spare, melancholic, and wise enough to let the Golden Age breathe.",
+			},
+			{
+				title: "Berserk: The Golden Age Arc",
+				format: "Film Trilogy / Memorial Edition",
+				year: "2012-2013 / 2022",
+				url: "https://en.wikipedia.org/wiki/Berserk:_The_Golden_Age_Arc",
+				description:
+					"The movie trilogy goes broader and more polished, and the later Memorial Edition smooths some of that material into a more complete watch.",
+			},
+			{
+				title: "Berserk (2016-2017)",
+				format: "TV Anime",
+				year: "2016-2017",
+				url: "https://en.wikipedia.org/wiki/Berserk_(2016_TV_series)",
+				description:
+					"An infamous attempt to continue beyond the Golden Age. It covers important material, but its visual choices are still the first thing most people remember.",
+			},
+		],
+	},
+	{
+		title: "Fan Animation",
+		kicker: "Work made out of love and obsession",
+		description:
+			"Berserk inspires the kind of fan labor that only happens when people cannot quite leave a world alone. Some of it is rough, some of it is astonishing, and almost all of it comes from care.",
+		items: [
+			{
+				title: "Studio Eclypse - The Black Swordsman",
+				format: "Fan Project",
+				year: "In production",
+				url: "https://www.youtube.com/@StudioEclypse",
+				description:
+					"The most visible current fan attempt to build a substantial Berserk adaptation from the Black Swordsman material outward.",
+			},
+			{
+				title: "Motion Manga and Scene Tests",
+				format: "Fan Animation Scene Work",
+				year: "Various",
+				url: "https://www.youtube.com/results?search_query=berserk+fan+animation",
+				description:
+					"Short-form tests, animated panels, and scene recreations that usually focus on one confrontation, one mood, or one impossible bit of action.",
+			},
+			{
+				title: "Independent Tribute Shorts",
+				format: "Fan Films / Shorts",
+				year: "Various",
+				url: "https://www.youtube.com/results?search_query=berserk+tribute+animation",
+				description:
+					"Small teams and solo artists keep making proof-of-concept work that doubles as tribute, portfolio piece, and argument for why Berserk still deserves another try.",
+			},
+		],
+	},
+	{
+		title: "Other Adaptations",
+		kicker: "Games, live-action talk, and side roads",
+		description:
+			"Not every adaptation of Berserk is a straight anime. Some are games, some are long-rumored projects, and some are strange edge cases that say more about the franchise's afterlife than its canon.",
+		items: [
+			{
+				title: "Sword of the Berserk: Guts' Rage",
+				format: "Dreamcast Game",
+				year: "1999",
+				url: "https://en.wikipedia.org/wiki/Sword_of_the_Berserk:_Guts%27_Rage",
+				description:
+					"An early game adaptation that feels very of its era, but still matters as one of the first big attempts to let players move through Berserk's world directly.",
+			},
+			{
+				title: "Berserk and the Band of the Hawk",
+				format: "Action Game",
+				year: "2016",
+				url: "https://en.wikipedia.org/wiki/Berserk_and_the_Band_of_the_Hawk",
+				description:
+					"A musou-style adaptation that turns major arcs into playable spectacle. Not subtle, but sometimes spectacle is exactly what the material is asking for.",
+			},
+			{
+				title: "Live-Action Rumors and Pitch Talk",
+				format: "Unmade / Speculative",
+				year: "Various",
+				url: "https://www.google.com/search?q=berserk+live+action+adaptation",
+				description:
+					"Berserk keeps being dragged into live-action wishlists and rumor cycles, usually because people want to believe someone, somewhere, will eventually take the risk.",
+			},
+		],
 	},
 ];
 

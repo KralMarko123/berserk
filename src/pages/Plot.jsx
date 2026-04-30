@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
+import MediaPlaceholder from "../components/MediaPlaceholder";
 import { PLOT_BEATS } from "../constants/Collections";
 import "../styles/pages/Plot.css";
 import Footer from "../components/layout/Footer";
@@ -30,7 +31,15 @@ const Plot = () => {
 								transition={{ type: "tween", duration: 0.5, delay: 0.12 * i }}
 							>
 								<div className="plot__image-wrap">
-									<img src={beat.image} alt={beat.title} />
+									{beat.image ? (
+										<img src={beat.image} alt={beat.title} />
+									) : (
+										<MediaPlaceholder
+											eyebrow="Panel needed"
+											title={beat.title}
+											note="Drop a manga panel or curated story image here."
+										/>
+									)}
 								</div>
 								<div className="plot__beat-copy">
 									<span>{beat.kicker}</span>

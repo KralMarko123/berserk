@@ -40,6 +40,12 @@
 	filter: grayscale(28%) contrast(1.15);
 }
 
+.plot__image-wrap .media-placeholder {
+	border: 0;
+	min-height: 100%;
+	padding: 1.25rem;
+}
+
 .plot__beat-copy {
 	padding: clamp(1rem, 3vw, 2.2rem);
 	display: flex;

@@ -4,6 +4,7 @@ import Plot from "../pages/Plot";
 import Characters from "../pages/Characters";
 import Details from "../pages/Details";
 import Resources from "../pages/Resources";
+import Adaptations from "../pages/Adaptations";
 import Community from "../pages/Community";
 import Artifacts from "../pages/Artifacts";
 import { Routes, Route } from "react-router-dom";
@@ -17,6 +18,7 @@ const MyRoutes = () => {
 			<Route path={ROUTES.characters} element={<Characters />} />
 			<Route path={ROUTES.details} element={<Details />} />
 			<Route path={ROUTES.resources} element={<Resources />} />
+			<Route path={ROUTES.adaptations} element={<Adaptations />} />
 			<Route path={ROUTES.community} element={<Community />} />
 			<Route path={ROUTES.artifacts} element={<Artifacts />} />
 		</Routes>

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import MediaPlaceholder from "../components/MediaPlaceholder";
 import { RESOURCES } from "../constants/Collections";
 import "../styles/pages/Resources.css";
 
@@ -28,6 +29,17 @@ const Resources = () => {
 								target="_blank"
 								rel="noreferrer"
 							>
+								<div className="resource-card__media">
+									{resource.image ? (
+										<img src={resource.image} alt={resource.title} />
+									) : (
+										<MediaPlaceholder
+											eyebrow="Asset needed"
+											title={resource.title}
+											note="Add a cover, logo, screenshot, or reference still here."
+										/>
+									)}
+								</div>
 								<span>{resource.type}</span>
 								<h2>{resource.title}</h2>
 								<p>{resource.description}</p>

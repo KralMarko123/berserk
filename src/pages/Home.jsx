@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { getImageAsset } from "../constants/media";
 
 const berserkLogo = getImageAsset("berserk_logo.png");
-const gutsCutout = getImageAsset("guts/guts_cutout.png");
+const gutsCutout = getImageAsset("characters/guts/guts_cutout.png");
 
 const Home = () => {
 	return (
@@ -69,8 +69,13 @@ const Home = () => {
 							<strong>Artifacts</strong>
 							<p>Marks, weapons, relics, and ideas that keep pressing the story toward fate and ruin.</p>
 						</Link>
-						<Link to="/community" className="home__entry">
+						<Link to="/adaptations" className="home__entry">
 							<span>05</span>
+							<strong>Adaptations</strong>
+							<p>Official anime, fan attempts, games, and the messy history of bringing Berserk off the page.</p>
+						</Link>
+						<Link to="/community" className="home__entry">
+							<span>06</span>
 							<strong>Community</strong>
 							<p>The essays, builds, playlists, rereads, and forums where Berserk keeps being shared.</p>
 						</Link>
