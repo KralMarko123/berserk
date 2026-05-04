@@ -31,7 +31,7 @@ const Details = () => {
 		);
 	}
 
-	const { name, category, cutout, image, intro, plotConnection, traits, epithet, arc, gallery, videos } =
+	const { name, category, cutout, image, intro, plotConnection, quote, traits, epithet, arc, gallery, videos } =
 		character;
 	const galleryItems = (gallery || []).map((galleryItem, index) => ({
 		src: galleryItem.src || galleryItem,
@@ -126,6 +126,13 @@ const Details = () => {
 							</div>
 						</div>
 					</section>
+					{quote ? (
+						<section className="details__quote" aria-label={`${name} quote`}>
+							<p className="details__quote-mark">Archive quote</p>
+							<blockquote>{quote}</blockquote>
+							<cite>{name}</cite>
+						</section>
+					) : null}
 					<section className="details__gallery">
 						<h2 className="section-title">Image gallery</h2>
 						<ImageCarousel

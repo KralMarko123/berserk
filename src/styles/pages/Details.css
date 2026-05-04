@@ -100,6 +100,7 @@
 .details__context,
 .details__personality,
 .details__plot-role,
+.details__quote,
 .details__gallery,
 .details__links {
 	width: 100%;
@@ -152,6 +153,83 @@
 .details__links {
 	padding-top: 1.5rem;
 	border-top: 1px solid var(--line-color);
+}
+
+.details__quote {
+	position: relative;
+	padding: 1.35rem 1.4rem 1.5rem;
+	border: 1px solid var(--line-color);
+	border-radius: var(--card-radius);
+	background:
+		linear-gradient(135deg, rgba(185, 31, 31, 0.12), transparent 38%),
+		var(--surface-color);
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+	overflow: hidden;
+}
+
+.details__quote::before,
+.details__quote::after {
+	position: absolute;
+	color: color-mix(in srgb, var(--blood-color) 24%, transparent);
+	font-family: var(--quote-font);
+	font-size: clamp(5rem, 9vw, 7rem);
+	line-height: 1;
+	pointer-events: none;
+}
+
+.details__quote::before {
+	content: "“";
+	top: 0.35rem;
+	left: 0.8rem;
+}
+
+.details__quote::after {
+	content: "”";
+	right: 1rem;
+	bottom: -1rem;
+}
+
+.details__quote-mark {
+	position: relative;
+	z-index: 1;
+	color: var(--blood-color);
+	font-family: var(--secondary-font);
+	font-size: 0.76rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.details__quote blockquote {
+	position: relative;
+	z-index: 1;
+	max-width: 28ch;
+	margin: 0;
+	padding-inline: 2.25rem 2rem;
+	color: var(--text-color);
+	font-family: var(--quote-font);
+	font-size: clamp(1.7rem, 3.2vw, 2.45rem);
+	font-weight: 600;
+	font-style: italic;
+	line-height: 1.02;
+	letter-spacing: 0.01em;
+	text-wrap: balance;
+}
+
+.details__quote cite {
+	position: relative;
+	z-index: 1;
+	color: var(--muted-color);
+	font-style: normal;
+	font-family: var(--secondary-font);
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.details__quote cite::before {
+	content: "— ";
 }
 
 .details__video-list a {
@@ -239,9 +317,32 @@
 	}
 
 	.details__context,
+	.details__quote,
 	.details__gallery,
 	.details__links {
 		padding-top: 1.1rem;
+	}
+
+	.details__quote {
+		padding: 1rem 0.95rem 1.1rem;
+		border-radius: 8px;
+	}
+
+	.details__quote::before {
+		top: 0.28rem;
+		left: 0.55rem;
+	}
+
+	.details__quote::after {
+		right: 0.65rem;
+		bottom: -0.75rem;
+	}
+
+	.details__quote blockquote {
+		max-width: 100%;
+		padding-inline: 1.55rem 1.35rem;
+		font-size: clamp(1.32rem, 6.6vw, 1.8rem);
+		line-height: 1.04;
 	}
 
 	.traits__list {

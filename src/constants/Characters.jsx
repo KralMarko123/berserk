@@ -1,10 +1,12 @@
 import { CHARACTER_GALLERIES, CHARACTER_MEDIA } from "./Collections";
+import { quotes } from "./quotes";
 
 const createCharacter = ({
 	name,
 	slug,
 	category,
 	epithet,
+	quote,
 	intro,
 	traits,
 	arc,
@@ -21,6 +23,7 @@ const createCharacter = ({
 	cutout: CHARACTER_MEDIA[slug].cutout,
 	intro,
 	plotConnection,
+	quote: quote || quotes[slug],
 	traits,
 	arc,
 	gallery: CHARACTER_GALLERIES[slug] || [],

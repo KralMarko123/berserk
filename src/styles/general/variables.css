@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap");
 :root {
 	--dark-main: #101010;
 	--dark-accent: #232323;
@@ -19,6 +20,7 @@
 
 	--main-font: "Red Hat Display", sans-serif;
 	--secondary-font: "Cantora One", sans-serif;
+	--quote-font: "Cormorant Garamond", serif;
 	--base: 18px;
 	--xxl: 4.8rem;
 	--xl: 3rem;
