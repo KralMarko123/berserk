@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import MediaPlaceholder from "../components/MediaPlaceholder";
-import { COMMUNITY_HUBS, COMMUNITY_ITEMS } from "../constants/Collections";
+import { COMMUNITY_FEATURE_IMAGE, COMMUNITY_HUBS, COMMUNITY_ITEMS } from "../constants/Collections";
 import "../styles/pages/Community.css";
 
 const Community = () => {
@@ -31,22 +31,30 @@ const Community = () => {
 							</p>
 						</div>
 						<div className="community__feature-plate">
-							<MediaPlaceholder
-								eyebrow="Community artwork needed"
-								title="Featured community visual"
-								note="Use this space for a collage, convention photo, fan wall, or other scene-setting image."
-							/>
+							{COMMUNITY_FEATURE_IMAGE ? (
+								<img src={COMMUNITY_FEATURE_IMAGE} alt="Berserk community collage" />
+							) : (
+								<MediaPlaceholder
+									eyebrow="Community artwork needed"
+									title="Featured community visual"
+									note="Use this space for a collage, convention photo, fan wall, or other scene-setting image."
+								/>
+							)}
 						</div>
 					</section>
 					<section className="community__grid">
 						{COMMUNITY_ITEMS.map((item, index) => (
 							<article className="community-card" key={item.title}>
 								<div className="community-card__media">
-									<MediaPlaceholder
-										eyebrow="Community image needed"
-										title={item.title}
-										note="Drop a photo, screenshot, post capture, or fan-work image here."
-									/>
+									{item.image ? (
+										<img src={item.image} alt={item.title} />
+									) : (
+										<MediaPlaceholder
+											eyebrow="Community image needed"
+											title={item.title}
+											note="Drop a photo, screenshot, post capture, or fan-work image here."
+										/>
+									)}
 								</div>
 								<div className="community-card__copy">
 									<div className="community-card__meta">

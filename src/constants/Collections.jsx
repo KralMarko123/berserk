@@ -1,6 +1,11 @@
-import { createGalleryItems, getImageAsset } from "./media";
-
-const uiBrand = getImageAsset("brand.png");
+import {
+	ADAPTATION_MEDIA,
+	COMMUNITY_MEDIA,
+	PLOT_MEDIA,
+	RESOURCE_MEDIA,
+	createGalleryItems,
+	getImageAsset,
+} from "./media";
 
 const image = (path) => getImageAsset(path);
 
@@ -76,42 +81,42 @@ export const PLOT_BEATS = [
 	{
 		title: "The Black Swordsman",
 		kicker: "A man too angry to die",
-		image: image("plot/blackswordsman.jpg"),
+		image: PLOT_MEDIA.blackSwordsman,
 		text:
 			"Guts moves through a world that barely lets him sleep, let alone heal. At first he reads like a monster story told from the wrong side, until the armor starts to crack and the grief underneath shows through.",
 	},
 	{
 		title: "Golden Age",
 		kicker: "Brotherhood, ambition, and the dream",
-		image: image("plot/goldenage.webp"),
+		image: PLOT_MEDIA.goldenAge,
 		text:
 			"The Band of the Hawk gives Guts a place to belong, and for a while that feeling is almost enough to make the world seem survivable. That warmth is exactly what makes the collapse hurt so much.",
 	},
 	{
 		title: "The Eclipse",
 		kicker: "Causality closes its hand",
-		image: image("plot/eclipse.webp"),
+		image: PLOT_MEDIA.eclipse,
 		text:
 			"The Eclipse turns love, loyalty, and ambition into one enormous wound. Guts and Casca live through it, but Berserk never treats survival as a happy ending. It becomes a burden, a duty, and a reason to keep walking.",
 	},
 	{
 		title: "Conviction",
 		kicker: "Faith under a poisoned sky",
-		image: image("plot/conviction.webp"),
+		image: PLOT_MEDIA.conviction,
 		text:
 			"Religious terror, refugees, apostles, and the Holy See all pile into the same cursed space. Conviction is where Berserk starts asking what belief looks like when fear is doing most of the talking.",
 	},
 	{
 		title: "Millennium Falcon",
 		kicker: "The world cracks open",
-		image: image("plot/mlleniumfalcon.webp"),
+		image: PLOT_MEDIA.millenniumFalcon,
 		text:
 			"Griffith returns in a body the world can kneel to, while Guts slowly gathers people he cannot afford to lose. By this point the monstrous is no longer hidden. It is just the weather everyone has to live under.",
 	},
 	{
 		title: "Fantasia",
 		kicker: "Healing is not the ending",
-		image: image("plot/fantasia.webp"),
+		image: PLOT_MEDIA.fantasia,
 		text:
 			"Magic, memory, and distance start to matter as much as brute force. Fantasia lets Berserk become strangely tender for stretches, then reminds you how fragile that tenderness still is.",
 	},
@@ -122,42 +127,42 @@ export const RESOURCES = [
 		title: "Official Dark Horse Manga",
 		type: "Publisher",
 		url: "https://www.darkhorse.com/Search/Berserk",
-		image: image("resources/darkhorse.png"),
+		image: RESOURCE_MEDIA.darkHorse,
 		description: "The practical place to check editions, releases, and what is officially in print.",
 	},
 	{
 		title: "SkullKnight.net Encyclopedia",
 		type: "Reference",
 		url: "https://www.skullknight.net/encyclopedia/",
-		image: image("resources/skullknightnet.png"),
+		image: RESOURCE_MEDIA.skullKnightNet,
 		description: "Old-school Berserk internet in the best sense: reference material, podcasts, and years of discussion.",
 	},
 	{
 		title: "Berserk Wiki",
 		type: "Reference",
 		url: "https://berserk.fandom.com/wiki/Berserk_Wiki",
-		image: image("resources/berserkwiki.png"),
+		image: RESOURCE_MEDIA.berserkWiki,
 		description: "Useful when you need to check a name, arc, location, or weird bit of terminology quickly.",
 	},
 	{
 		title: "Character Lore Videos",
 		type: "Video Search",
 		url: "https://www.youtube.com/results?search_query=Berserk+character+lore",
-		image: image("resources/characterlore.jpg"),
+		image: RESOURCE_MEDIA.characterLore,
 		description: "A decent first stop when you want someone to talk through a character or arc out loud.",
 	},
 	{
 		title: "Berserk Analysis Essays",
 		type: "Video Search",
 		url: "https://www.youtube.com/results?search_query=Berserk+analysis+Kentaro+Miura",
-		image: image("resources/readingessay.jpg"),
+		image: RESOURCE_MEDIA.readingEssay,
 		description: "Good for themes, symbolism, page construction, and the kind of long-form reading Berserk invites.",
 	},
 	{
 		title: "Studio Gaga and Continuation News",
 		type: "Search",
 		url: "https://www.google.com/search?q=Berserk+Studio+Gaga+news",
-		image: image("resources/studiogaga.webp"),
+		image: RESOURCE_MEDIA.studioGaga,
 		description: "A simple way to keep up with current continuation coverage without pretending one source owns the whole story.",
 	},
 ];
@@ -173,6 +178,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Berserk (1997)",
 				format: "TV Anime",
 				year: "1997-1998",
+				image: ADAPTATION_MEDIA.berserk1997,
 				url: "https://en.wikipedia.org/wiki/Berserk_(1997_TV_series)",
 				description:
 					"For a lot of readers this is still the adaptation that lands best emotionally: spare, melancholic, and wise enough to let the Golden Age breathe.",
@@ -181,6 +187,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Berserk: The Golden Age Arc",
 				format: "Film Trilogy / Memorial Edition",
 				year: "2012-2013 / 2022",
+				image: ADAPTATION_MEDIA.goldenAgeArc,
 				url: "https://en.wikipedia.org/wiki/Berserk:_The_Golden_Age_Arc",
 				description:
 					"The movie trilogy goes broader and more polished, and the later Memorial Edition smooths some of that material into a more complete watch.",
@@ -189,6 +196,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Berserk (2016-2017)",
 				format: "TV Anime",
 				year: "2016-2017",
+				image: ADAPTATION_MEDIA.berserk2016,
 				url: "https://en.wikipedia.org/wiki/Berserk_(2016_TV_series)",
 				description:
 					"An infamous attempt to continue beyond the Golden Age. It covers important material, but its visual choices are still the first thing most people remember.",
@@ -205,6 +213,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Studio Eclypse - The Black Swordsman",
 				format: "Fan Project",
 				year: "In production",
+				image: ADAPTATION_MEDIA.studioEclypse,
 				url: "https://www.youtube.com/@StudioEclypse",
 				description:
 					"The most visible current fan attempt to build a substantial Berserk adaptation from the Black Swordsman material outward.",
@@ -213,6 +222,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Motion Manga and Scene Tests",
 				format: "Fan Animation Scene Work",
 				year: "Various",
+				image: ADAPTATION_MEDIA.fanAnimation,
 				url: "https://www.youtube.com/results?search_query=berserk+fan+animation",
 				description:
 					"Short-form tests, animated panels, and scene recreations that usually focus on one confrontation, one mood, or one impossible bit of action.",
@@ -221,6 +231,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Independent Tribute Shorts",
 				format: "Fan Films / Shorts",
 				year: "Various",
+				image: ADAPTATION_MEDIA.tributeAnimation,
 				url: "https://www.youtube.com/results?search_query=berserk+tribute+animation",
 				description:
 					"Small teams and solo artists keep making proof-of-concept work that doubles as tribute, portfolio piece, and argument for why Berserk still deserves another try.",
@@ -237,6 +248,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Sword of the Berserk: Guts' Rage",
 				format: "Dreamcast Game",
 				year: "1999",
+				image: ADAPTATION_MEDIA.gutsRage,
 				url: "https://en.wikipedia.org/wiki/Sword_of_the_Berserk:_Guts%27_Rage",
 				description:
 					"An early game adaptation that feels very of its era, but still matters as one of the first big attempts to let players move through Berserk's world directly.",
@@ -245,6 +257,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Berserk and the Band of the Hawk",
 				format: "Action Game",
 				year: "2016",
+				image: ADAPTATION_MEDIA.bandOfTheHawk,
 				url: "https://en.wikipedia.org/wiki/Berserk_and_the_Band_of_the_Hawk",
 				description:
 					"A musou-style adaptation that turns major arcs into playable spectacle. Not subtle, but sometimes spectacle is exactly what the material is asking for.",
@@ -253,6 +266,7 @@ export const ADAPTATION_SECTIONS = [
 				title: "Live-Action Rumors and Pitch Talk",
 				format: "Unmade / Speculative",
 				year: "Various",
+				image: ADAPTATION_MEDIA.liveAction,
 				url: "https://www.google.com/search?q=berserk+live+action+adaptation",
 				description:
 					"Berserk keeps being dragged into live-action wishlists and rumor cycles, usually because people want to believe someone, somewhere, will eventually take the risk.",
@@ -364,60 +378,62 @@ export const COMMUNITY_ITEMS = [
 	{
 		title: "Panel Study Nights",
 		source: "Referenced from manga-reading communities and art study threads.",
-		image: portraits.skullKnight,
+		image: COMMUNITY_MEDIA.studyNight,
 		description:
 			"People keep returning to Miura's pages the way art students return to a difficult painting: to slow down, stare hard, and figure out how the line work is doing so much.",
 	},
 	{
 		title: "Cosplay and Prop Builds",
 		source: "Referenced from convention showcases, maker forums, and video build logs.",
-		image: portraits.guts,
+		image: COMMUNITY_MEDIA.cosplay,
 		description:
 			"The Dragonslayer, the armor, and the Brand keep pulling in builders who like their projects oversized, difficult, and a little ridiculous in the best way.",
 	},
 	{
 		title: "Music for the Long Road",
 		source: "Referenced from fan playlists and ambient mixes inspired by the manga.",
-		image: uiBrand,
+		image: COMMUNITY_MEDIA.music,
 		description:
 			"From Hirasawa-adjacent mixes to rainy reading playlists, people have built a whole atmosphere around how Berserk should sound in your room.",
 	},
 	{
 		title: "Theory Archives",
 		source: "Referenced from long-running forum discussions and subreddit theory posts.",
-		image: portraits.casca,
+		image: COMMUNITY_MEDIA.theory,
 		description:
 			"Causality, Moonlight Boy, Skull Knight's past, Falconia's future: this fandom loves a theory that sends you back three arcs to check a face in the background.",
 	},
 	{
 		title: "Character Essays",
 		source: "Referenced from video essays, blog posts, and reread threads.",
-		image: portraits.judeau,
+		image: COMMUNITY_MEDIA.characterEssay,
 		description:
 			"People love writing about how Miura builds emotion, especially around characters like Casca, Judeau, Farnese, and Griffith, because rereading always reveals another seam.",
 	},
 	{
 		title: "Tattoo and Symbol Design",
 		source: "Referenced from tattoo portfolios and fan art circles.",
-		image: uiBrand,
+		image: COMMUNITY_MEDIA.tattoo,
 		description:
 			"The Brand and Hawk imagery have become some of the most common ways fans carry Berserk into real life, whether that means tattoos, prints, or handmade things.",
 	},
 	{
 		title: "Figure and Merchandise Hunting",
 		source: "Referenced from collector threads and hobby marketplaces.",
-		image: portraits.zodd,
+		image: COMMUNITY_MEDIA.figure,
 		description:
 			"Collectors swap notes on statues, deluxe volumes, older figures, soundtracks, and all the oddly specific side roads of Berserk merchandise.",
 	},
 	{
 		title: "Reread Clubs",
 		source: "Referenced from forum clubs, subreddits, and read-along threads.",
-		image: portraits.puck,
+		image: COMMUNITY_MEDIA.reread,
 		description:
 			"Some of the best discussion comes from rereads where people stop rushing and start noticing tone shifts, planted images, and how Guts changes around other people.",
 	},
 ];
+
+export const COMMUNITY_FEATURE_IMAGE = COMMUNITY_MEDIA.featurePoster;
 
 export const COMMUNITY_HUBS = [
 	{

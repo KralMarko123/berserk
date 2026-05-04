@@ -44,11 +44,15 @@ const Adaptations = () => {
 											rel="noreferrer"
 										>
 											<div className="adaptation-card__image-wrap">
-												<MediaPlaceholder
-													eyebrow="Artwork needed"
-													title={item.title}
-													note="Drop a dedicated adaptation still, poster, or key visual here."
-												/>
+												{item.image ? (
+													<img src={item.image} alt={item.title} />
+												) : (
+													<MediaPlaceholder
+														eyebrow="Artwork needed"
+														title={item.title}
+														note="Drop a dedicated adaptation still, poster, or key visual here."
+													/>
+												)}
 											</div>
 											<div className="adaptation-card__copy">
 												<div className="adaptation-card__meta">
