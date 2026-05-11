@@ -1,5 +1,8 @@
 import { CHARACTER_GALLERIES, CHARACTER_MEDIA } from "./Collections";
-import { quotes } from "./quotes";
+import { CHARACTER_QUOTES } from "./quotes";
+
+const getCharacterQuote = (slug, explicitQuote) =>
+	explicitQuote || CHARACTER_QUOTES[slug] || CHARACTER_QUOTES[slug.replace(/-/g, "")];
 
 const createCharacter = ({
 	name,
@@ -23,7 +26,7 @@ const createCharacter = ({
 	cutout: CHARACTER_MEDIA[slug].cutout,
 	intro,
 	plotConnection,
-	quote: quote || quotes[slug],
+	quote: getCharacterQuote(slug, quote),
 	traits,
 	arc,
 	gallery: CHARACTER_GALLERIES[slug] || [],
